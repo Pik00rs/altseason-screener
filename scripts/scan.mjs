@@ -329,6 +329,7 @@ async function main() {
     updated_at: new Date().toISOString(), source: "coinmarketcap",
     note: "Triage, pas un prédicteur. Le tracker dit si le score vaut quelque chose.",
     weights_mode: prevW && prevW.active ? "appris" : "défaut", weights: activeWeights,
+    dd_status: { coingecko: !!CG_KEY, cg: cgCount, dd: ddCount },
     count: candidates.length, candidates,
   }, null, 2));
   console.log(`screener: ${candidates.length} candidats (poids ${prevW && prevW.active ? "appris" : "défaut"}, DD sur ${ddCount}).`);
