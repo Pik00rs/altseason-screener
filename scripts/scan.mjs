@@ -154,8 +154,151 @@ function summarize(entries) {
   });
 }
 
+// ---------- enrichissement DUE DILIGENCE (affichage seul, ne touche pas au score) ----------
+const DD = {
+  enrichN: Number(process.env.DD_ENRICH_N || 50),       // nb de candidats enrichis
+  searchFallback: Number(process.env.DD_SEARCH_FALLBACK || 10), // recherches DexScreener par symbole (sans adresse)
+  cgN: Number(process.env.CG_ENRICH_N || 12),           // CoinGecko : top N seulement (budget gratuit)
+  lowLiq: Number(process.env.DD_LOW_LIQ || 100_000),    // seuil "liquidité faible"
+  freshDays: Number(process.env.DD_FRESH_DAYS || 14),   // seuil "paire récente"
+  minFees: Number(process.env.DD_MIN_FEES || 1_000),    // seuil "revenu réel" (fees 24h)
+};
+const CG_KEY = process.env.COINGECKO_API_KEY || "";
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+async function safeJson(url, opts = {}) {
+  try {
+    const res = await fetch(url, { ...opts, signal: AbortSignal.timeout(15000) });
+    if (!res.ok) return null;
+    return await res.json();
+  } catch { return null; }
+}
+
+// DefiLlama : 2 appels groupés (pas par coin), sans clé.
+async function fetchDefiLlama() {
+  const [protos, feesObj] = await Promise.all([
+    safeJson("https://api.llama.fi/protocols"),
+    safeJson("https://api.llama.fi/overview/fees?excludeTotalDataChart=true&excludeTotalDataChartBreakdown=true"),
+  ]);
+  const bySymbol = new Map();
+  if (Array.isArray(protos)) {
+    for (const p of protos) {
+      if (!p.symbol || p.symbol === "-") continue;
+      const k = p.symbol.toUpperCase();
+      const prev = bySymbol.get(k);
+      if (!prev || (p.tvl || 0) > (prev.tvl || 0)) {
+        bySymbol.set(k, { name: p.name, tvl: p.tvl || 0, category: p.category || null });
+      }
+    }
+  }
+  const feesByName = new Map();
+  const fp = feesObj && (feesObj.protocols || feesObj);
+  if (Array.isArray(fp)) for (const f of fp) if (f.name) feesByName.set(f.name.toLowerCase(), f.total24h ?? null);
+  return { bySymbol, feesByName };
+}
+
+// DexScreener : groupé par adresse (30 max/appel), sans clé.
+async function fetchDexByAddress(addresses) {
+  const out = new Map();
+  for (let i = 0; i < addresses.length; i += 30) {
+    const chunk = addresses.slice(i, i + 30);
+    const data = await safeJson(`https://api.dexscreener.com/latest/dex/tokens/${chunk.join(",")}`);
+    for (const pr of (data && data.pairs) || []) {
+      const addr = ((pr.baseToken && pr.baseToken.address) || "").toLowerCase();
+      if (!addr) continue;
+      const liq = (pr.liquidity && pr.liquidity.usd) || 0;
+      const prev = out.get(addr);
+      if (!prev || liq > prev.liquidity_usd) {
+        out.set(addr, {
+          liquidity_usd: liq,
+          pair_age_days: pr.pairCreatedAt ? Math.floor((Date.now() - pr.pairCreatedAt) / DAY) : null,
+        });
+      }
+    }
+    await sleep(250);
+  }
+  return out;
+}
+
+async function dexSearch(symbol) {
+  const data = await safeJson(`https://api.dexscreener.com/latest/dex/search?q=${encodeURIComponent(symbol)}`);
+  const pairs = ((data && data.pairs) || []).filter(
+    (p) => p.baseToken && (p.baseToken.symbol || "").toUpperCase() === symbol.toUpperCase()
+  );
+  if (!pairs.length) return null;
+  pairs.sort((a, b) => ((b.liquidity && b.liquidity.usd) || 0) - ((a.liquidity && a.liquidity.usd) || 0));
+  const pr = pairs[0];
+  return {
+    liquidity_usd: (pr.liquidity && pr.liquidity.usd) || 0,
+    pair_age_days: pr.pairCreatedAt ? Math.floor((Date.now() - pr.pairCreatedAt) / DAY) : null,
+  };
+}
+
+async function enrichDD(candidates, rawById) {
+  const llama = await fetchDefiLlama();
+  const toEnrich = candidates.slice(0, DD.enrichN);
+
+  const addrList = [];
+  for (const c of toEnrich) {
+    const addr = rawById.get(c.id)?.platform?.token_address;
+    if (addr) addrList.push(addr);
+  }
+  let dexByAddr = new Map();
+  try { dexByAddr = await fetchDexByAddress(addrList); } catch { /* best-effort */ }
+
+  let searches = 0;
+  for (const c of toEnrich) {
+    const addr = rawById.get(c.id)?.platform?.token_address?.toLowerCase();
+    let dex = addr ? dexByAddr.get(addr) : null;
+    if (!dex && !addr && searches < DD.searchFallback) {
+      try { dex = await dexSearch(c.symbol); } catch {}
+      searches++; await sleep(250);
+    }
+    const fl = llama.bySymbol.get(c.symbol.toUpperCase());
+    const fees24h = fl ? llama.feesByName.get(fl.name.toLowerCase()) : null;
+
+    const dd = {
+      tvl: fl?.tvl ?? null,
+      category: fl?.category ?? null,
+      fees24h: fees24h ?? null,
+      liquidity_usd: dex?.liquidity_usd ?? null,
+      pair_age_days: dex?.pair_age_days ?? null,
+      token_age_days: null,
+      flags: [],
+    };
+    if (dd.fees24h != null && dd.fees24h >= DD.minFees) dd.flags.push({ k: "revenu réel", t: "ok" });
+    if (dd.tvl != null && dd.tvl > 0 && (dd.fees24h == null || dd.fees24h < DD.minFees)) dd.flags.push({ k: "TVL sans revenu", t: "warn" });
+    if (dd.liquidity_usd != null && dd.liquidity_usd < DD.lowLiq) dd.flags.push({ k: "liquidité faible", t: "bad" });
+    if (dd.pair_age_days != null && dd.pair_age_days < DD.freshDays) dd.flags.push({ k: "paire récente", t: "warn" });
+    c.dd = dd;
+  }
+}
+
+// CoinGecko : OFF tant que COINGECKO_API_KEY n'est pas dans les Secrets. Top N seulement (budget gratuit).
+async function enrichCoinGecko(candidates) {
+  if (!CG_KEY) return;
+  const h = { "x-cg-demo-api-key": CG_KEY, accept: "application/json" };
+  const list = await safeJson("https://api.coingecko.com/api/v3/coins/list", { headers: h });
+  if (!Array.isArray(list)) return;
+  const bySym = new Map();
+  for (const c of list) { const k = (c.symbol || "").toUpperCase(); if (!bySym.has(k)) bySym.set(k, c.id); }
+  let n = 0;
+  for (const c of candidates) {
+    if (n >= DD.cgN) break;
+    const id = bySym.get(c.symbol.toUpperCase());
+    if (!id) continue;
+    const d = await safeJson(`https://api.coingecko.com/api/v3/coins/${id}?localization=false&tickers=false&market_data=false&community_data=false&developer_data=false`, { headers: h });
+    n++; await sleep(2500); // demo ~30/min
+    if (!d) continue;
+    c.dd = c.dd || { flags: [] };
+    if (d.genesis_date) c.dd.token_age_days = Math.floor((Date.now() - new Date(d.genesis_date).getTime()) / DAY);
+    if (!c.dd.category && Array.isArray(d.categories) && d.categories[0]) c.dd.category = d.categories[0];
+  }
+}
+
 async function main() {
   const listings = await fetchListings();
+  const rawById = new Map(listings.map((c) => [c.id, c]));
 
   // 1) Poids actifs = ceux appris au run précédent (walk-forward, pas de lookahead).
   const prevW = await loadJson(CONFIG.weightsOut, null);
@@ -174,6 +317,11 @@ async function main() {
     };
   }).sort((a, b) => b.score - a.score).slice(0, CONFIG.topN);
 
+  // 2b) Enrichissement Due Diligence (best-effort, n'affecte pas le score).
+  try { await enrichDD(candidates, rawById); } catch (e) { console.warn("DD DefiLlama/DexScreener:", e.message); }
+  try { await enrichCoinGecko(candidates); } catch (e) { console.warn("DD CoinGecko:", e.message); }
+  const ddCount = candidates.filter((c) => c.dd && (c.dd.liquidity_usd != null || c.dd.tvl != null)).length;
+
   await mkdir(dirname(CONFIG.out), { recursive: true });
   await writeFile(CONFIG.out, JSON.stringify({
     updated_at: new Date().toISOString(), source: "coinmarketcap",
@@ -181,7 +329,7 @@ async function main() {
     weights_mode: prevW && prevW.active ? "appris" : "défaut", weights: activeWeights,
     count: candidates.length, candidates,
   }, null, 2));
-  console.log(`screener: ${candidates.length} candidats (poids ${prevW && prevW.active ? "appris" : "défaut"}).`);
+  console.log(`screener: ${candidates.length} candidats (poids ${prevW && prevW.active ? "appris" : "défaut"}, DD sur ${ddCount}).`);
 
   // 3) Met à jour le tracker (maturation + nouveaux picks).
   const prevT = await loadJson(CONFIG.trackerOut, { entries: [] });
