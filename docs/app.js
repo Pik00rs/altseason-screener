@@ -22,6 +22,11 @@ async function load() {
     state.rows = data.candidates || [];
     document.getElementById("updated").textContent = "maj " + new Date(data.updated_at).toLocaleString("fr-FR");
     document.getElementById("source").textContent = data.source || "";
+    const ds = data.dd_status;
+    if (ds) {
+      document.getElementById("dd-status").textContent =
+        `DD ${ds.dd} coins · CoinGecko ${ds.coingecko ? "actif (" + ds.cg + ")" : "off"}`;
+    }
   } catch (e) {
     document.getElementById("updated").textContent = "données indisponibles";
     console.error(e);
