@@ -24,37 +24,62 @@
   </header>
 
   <p class="disclaimer">
-    Outil de <strong>triage</strong>, pas un prédicteur de pump. Le score dit
-    « ça ressemble à ce qui a historiquement bougé », pas « ça va monter ».
-    Agir dessus reste de la spéculation. <strong>Backteste avant d'y croire.</strong>
+    Outil de <strong>triage</strong>, pas un prédicteur de pump. L'onglet
+    <strong>tracker</strong> mesure la perf réelle des picks à +1j/+7j/+30j —
+    c'est lui qui dit si le score vaut quelque chose. Agir dessus reste de la spéculation.
   </p>
 
+  <nav class="tabs">
+    <button class="tab active" data-view="screener">screener</button>
+    <button class="tab" data-view="tracker">tracker +1j/+7j/+30j</button>
+  </nav>
+
   <main>
-    <div class="toolbar">
-      <input id="search" type="search" placeholder="filtrer (symbole / nom)…" autocomplete="off" />
-      <span class="hint">clique un en-tête pour trier</span>
-    </div>
+    <section id="view-screener">
+      <div class="toolbar">
+        <input id="search" type="search" placeholder="filtrer (symbole / nom)…" autocomplete="off" />
+        <span class="hint">clique un en-tête pour trier</span>
+      </div>
+      <div class="table-wrap">
+        <table id="grid">
+          <thead>
+            <tr>
+              <th data-key="score" class="num sortable sorted-desc">score</th>
+              <th data-key="symbol" class="sortable">ticker</th>
+              <th data-key="name" class="sortable">nom</th>
+              <th data-key="price" class="num sortable">prix</th>
+              <th data-key="market_cap" class="num sortable">mcap</th>
+              <th data-key="pct_7d" class="num sortable">7j</th>
+              <th data-key="pct_30d" class="num sortable">30j</th>
+              <th data-key="float_ratio" class="num sortable">float</th>
+              <th data-key="volume_24h" class="num sortable">vol 24h</th>
+            </tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+      <p id="empty" class="empty" hidden>Aucun candidat. Lance le scan ou élargis les filtres.</p>
+    </section>
 
-    <div class="table-wrap">
-      <table id="grid">
-        <thead>
-          <tr>
-            <th data-key="score" class="num sortable sorted-desc">score</th>
-            <th data-key="symbol" class="sortable">ticker</th>
-            <th data-key="name" class="sortable">nom</th>
-            <th data-key="price" class="num sortable">prix</th>
-            <th data-key="market_cap" class="num sortable">mcap</th>
-            <th data-key="pct_7d" class="num sortable">7j</th>
-            <th data-key="pct_30d" class="num sortable">30j</th>
-            <th data-key="float_ratio" class="num sortable">float</th>
-            <th data-key="volume_24h" class="num sortable">vol 24h</th>
-          </tr>
-        </thead>
-        <tbody id="rows"></tbody>
-      </table>
-    </div>
-
-    <p id="empty" class="empty" hidden>Aucun candidat. Lance le scan (Actions) ou élargis les filtres.</p>
+    <section id="view-tracker" hidden>
+      <div id="summary" class="summary"></div>
+      <div class="table-wrap">
+        <table id="track-grid">
+          <thead>
+            <tr>
+              <th>entrée</th>
+              <th>ticker</th>
+              <th class="num">score</th>
+              <th class="num">+1j</th>
+              <th class="num">+7j</th>
+              <th class="num">+30j</th>
+            </tr>
+          </thead>
+          <tbody id="track-rows"></tbody>
+        </table>
+      </div>
+      <p id="track-empty" class="empty" hidden>Pas encore d'historique. Le tracker se remplit jour après jour — reviens dans 1, 7 puis 30 jours.</p>
+    </section>
   </main>
 
   <footer>
