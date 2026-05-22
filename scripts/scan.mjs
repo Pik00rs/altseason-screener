@@ -321,6 +321,8 @@ async function main() {
   try { await enrichDD(candidates, rawById); } catch (e) { console.warn("DD DefiLlama/DexScreener:", e.message); }
   try { await enrichCoinGecko(candidates); } catch (e) { console.warn("DD CoinGecko:", e.message); }
   const ddCount = candidates.filter((c) => c.dd && (c.dd.liquidity_usd != null || c.dd.tvl != null)).length;
+  const cgCount = candidates.filter((c) => c.dd && c.dd.token_age_days != null).length;
+  console.log(`CoinGecko: ${CG_KEY ? "clé détectée" : "PAS de clé"}, ${cgCount} enrichis (âge/catégorie).`);
 
   await mkdir(dirname(CONFIG.out), { recursive: true });
   await writeFile(CONFIG.out, JSON.stringify({
