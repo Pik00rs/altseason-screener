@@ -65,6 +65,26 @@ async function loadModel() {
 }
 
 // ---------- screener ----------
+function flagChips(dd) {
+  if (!dd || !dd.flags || !dd.flags.length) return '<span class="muted">—</span>';
+  return dd.flags.map((f) => `<span class="chip ${f.t}">${f.k}</span>`).join("");
+}
+function ddDetail(dd) {
+  if (!dd) return '<span class="muted">Pas de données DD.</span>';
+  const none = dd.tvl == null && dd.liquidity_usd == null && dd.fees24h == null;
+  const age = dd.token_age_days != null ? dd.token_age_days + " j"
+    : dd.pair_age_days != null ? dd.pair_age_days + " j (paire)" : "—";
+  const bits = [
+    `revenu 24h <b>${dd.fees24h != null ? fmtUsd(dd.fees24h) : "n/a"}</b>`,
+    `TVL <b>${dd.tvl != null ? fmtUsd(dd.tvl) : "n/a"}</b>`,
+    `liquidité DEX <b>${dd.liquidity_usd != null ? fmtUsd(dd.liquidity_usd) : "n/a"}</b>`,
+    `âge <b>${age}</b>`,
+    `catégorie <b>${dd.category || "n/a"}</b>`,
+  ];
+  return (none ? `<span class="muted">Pas de données DD (sans doute pas un protocole DeFi ni de paire DEX trackée). </span>` : "")
+    + bits.join('<span class="sep">·</span>');
+}
+
 function sorted() {
   const f = state.filter.toLowerCase();
   const rows = state.rows.filter((r) => !f || r.symbol.toLowerCase().includes(f) || r.name.toLowerCase().includes(f));
@@ -82,7 +102,7 @@ function render() {
   document.getElementById("empty").hidden = rows.length > 0;
   tbody.innerHTML = rows.map((r, i) => {
     const pct = Math.round(r.score * 100);
-    return `<tr style="animation-delay:${Math.min(i * 18, 500)}ms">
+    return `<tr class="main-row" style="animation-delay:${Math.min(i * 18, 500)}ms">
       <td class="num"><div class="score-cell">
         <span class="score-val">${r.score.toFixed(2)}</span>
         <span class="score-bar"><i style="width:${pct}%"></i></span>
@@ -95,7 +115,9 @@ function render() {
       <td class="num ${pctClass(r.pct_30d)}">${fmtPct(r.pct_30d)}</td>
       <td class="num">${r.float_ratio == null ? "—" : (r.float_ratio * 100).toFixed(0) + "%"}</td>
       <td class="num">${fmtUsd(r.volume_24h)}</td>
-    </tr>`;
+      <td class="dd-cell">${flagChips(r.dd)}</td>
+    </tr>
+    <tr class="dd-row" hidden><td colspan="10" class="dd-detail">${ddDetail(r.dd)}</td></tr>`;
   }).join("");
 }
 
@@ -160,6 +182,14 @@ document.querySelectorAll(".tab").forEach((tab) => {
 document.getElementById("search").addEventListener("input", (e) => {
   state.filter = e.target.value;
   render();
+});
+
+// clic sur une ligne -> déplie/replie le détail DD
+document.getElementById("rows").addEventListener("click", (e) => {
+  const tr = e.target.closest("tr.main-row");
+  if (!tr) return;
+  const next = tr.nextElementSibling;
+  if (next && next.classList.contains("dd-row")) next.hidden = !next.hidden;
 });
 
 setupSort();

@@ -163,3 +163,22 @@ footer { margin-top: 22px; color: var(--ink-dim); font-size: 11px; letter-spacin
 .wtrack { height: 6px; border-radius: 3px; background: var(--line); overflow: hidden; }
 .wtrack > i { display: block; height: 100%; background: linear-gradient(90deg, var(--lime-dim), var(--lime)); }
 .wbar b { text-align: right; color: var(--ink); font-variant-numeric: tabular-nums; }
+
+/* --- colonne Due Diligence --- */
+.main-row { cursor: pointer; }
+.main-row:hover { background: rgba(255,255,255,.02); }
+.dd-cell { white-space: nowrap; }
+.chip {
+  display: inline-block; font-size: 10.5px; padding: 2px 7px; border-radius: 999px;
+  margin: 1px 3px 1px 0; border: 1px solid var(--line); line-height: 1.4;
+}
+.chip.ok { color: var(--green); border-color: color-mix(in srgb, var(--green) 40%, transparent); }
+.chip.bad { color: var(--red); border-color: color-mix(in srgb, var(--red) 40%, transparent); }
+.chip.warn { color: var(--amber); border-color: color-mix(in srgb, var(--amber) 40%, transparent); }
+.muted { color: var(--ink-dim); }
+.dd-row > .dd-detail {
+  background: rgba(0,0,0,.25); color: var(--ink-dim); font-size: 12px;
+  padding: 10px 16px; line-height: 1.7;
+}
+.dd-detail b { color: var(--ink); font-weight: 600; }
+.dd-detail .sep { margin: 0 8px; opacity: .4; }
