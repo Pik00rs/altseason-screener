@@ -1,1 +1,66 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SIGNAL · altseason screener</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="scanline" aria-hidden="true"></div>
 
+  <header class="masthead">
+    <div class="brand">
+      <span class="dot" aria-hidden="true"></span>
+      <h1>SIGNAL<span class="slash">/</span><em>screener</em></h1>
+    </div>
+    <div class="meta">
+      <span id="updated">— chargement —</span>
+      <span class="src" id="source"></span>
+    </div>
+  </header>
+
+  <p class="disclaimer">
+    Outil de <strong>triage</strong>, pas un prédicteur de pump. Le score dit
+    « ça ressemble à ce qui a historiquement bougé », pas « ça va monter ».
+    Agir dessus reste de la spéculation. <strong>Backteste avant d'y croire.</strong>
+  </p>
+
+  <main>
+    <div class="toolbar">
+      <input id="search" type="search" placeholder="filtrer (symbole / nom)…" autocomplete="off" />
+      <span class="hint">clique un en-tête pour trier</span>
+    </div>
+
+    <div class="table-wrap">
+      <table id="grid">
+        <thead>
+          <tr>
+            <th data-key="score" class="num sortable sorted-desc">score</th>
+            <th data-key="symbol" class="sortable">ticker</th>
+            <th data-key="name" class="sortable">nom</th>
+            <th data-key="price" class="num sortable">prix</th>
+            <th data-key="market_cap" class="num sortable">mcap</th>
+            <th data-key="pct_7d" class="num sortable">7j</th>
+            <th data-key="pct_30d" class="num sortable">30j</th>
+            <th data-key="float_ratio" class="num sortable">float</th>
+            <th data-key="volume_24h" class="num sortable">vol 24h</th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+
+    <p id="empty" class="empty" hidden>Aucun candidat. Lance le scan (Actions) ou élargis les filtres.</p>
+  </main>
+
+  <footer>
+    <span>read-only · aucune clé exposée · données via GitHub Actions → JSON statique</span>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
