@@ -25,6 +25,7 @@ jobs:
       - name: Run scan (server-side, clé jamais exposée)
         env:
           CMC_API_KEY: ${{ secrets.CMC_API_KEY }}
+          COINGECKO_API_KEY: ${{ secrets.COINGECKO_API_KEY }}
           MIN_MARKET_CAP: "15000000"
           MAX_MARKET_CAP: "500000000"
           MIN_VOLUME_24H: "1000000"
