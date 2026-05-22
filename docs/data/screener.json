@@ -1,12 +1,914 @@
 {
-  "updated_at": "2026-05-23T00:00:00.000Z",
-  "source": "SAMPLE",
-  "note": "Données EXEMPLE — remplacées au premier run du scan (GitHub Actions).",
-  "weights": { "float_quality": 0.25, "momentum_7d": 0.25, "momentum_30d": 0.2, "volume_surge": 0.3 },
-  "count": 3,
+  "updated_at": "2026-05-22T19:20:04.006Z",
+  "source": "coinmarketcap",
+  "note": "Outil de triage, pas un prédicteur. Backteste avant de croire le score.",
+  "weights": {
+    "float_quality": 0.25,
+    "momentum_7d": 0.25,
+    "momentum_30d": 0.2,
+    "volume_surge": 0.3
+  },
+  "count": 50,
   "candidates": [
-    { "id": 28412, "symbol": "IO", "name": "io.net", "price": 0.152, "market_cap": 50800000, "volume_24h": 39000000, "pct_7d": 11.9, "pct_30d": 22.0, "float_ratio": 0.42, "score": 0.50, "parts": {} },
-    { "id": 7431, "symbol": "AKT", "name": "Akash Network", "price": 0.85, "market_cap": 250000000, "volume_24h": 13300000, "pct_7d": -8.3, "pct_30d": 46.6, "float_ratio": 0.76, "score": 0.31, "parts": {} },
-    { "id": 5665, "symbol": "HNT", "name": "Helium", "price": 0.80, "market_cap": 150000000, "volume_24h": 3000000, "pct_7d": -10.5, "pct_30d": -5.0, "float_ratio": 0.84, "score": 0.22, "parts": {} }
+    {
+      "id": 39965,
+      "symbol": "NEX",
+      "name": "Nexus",
+      "price": 0.000004282294358952814,
+      "market_cap": 256937661.53716883,
+      "volume_24h": 87248238.27550747,
+      "pct_7d": 74.47055616,
+      "pct_30d": 74.47055616,
+      "float_ratio": 0.6,
+      "score": 0.7526829174415962,
+      "parts": {
+        "float_quality": 0.6,
+        "momentum_7d": 1,
+        "momentum_30d": 0.7447055616,
+        "volume_surge": 0.6791393504053205
+      }
+    },
+    {
+      "id": 38837,
+      "symbol": "BEAT",
+      "name": "Audiera",
+      "price": 1.142572070115338,
+      "market_cap": 304800141.80938697,
+      "volume_24h": 89963272.6489868,
+      "pct_7d": 83.87059467,
+      "pct_30d": 105.11066609,
+      "float_ratio": 0.266766666,
+      "score": 0.6937846405024476,
+      "parts": {
+        "float_quality": 0.266766666,
+        "momentum_7d": 1,
+        "momentum_30d": 1,
+        "volume_surge": 0.5903099133414917
+      }
+    },
+    {
+      "id": 2467,
+      "symbol": "TRAC",
+      "name": "OriginTrail",
+      "price": 0.4460319302408372,
+      "market_cap": 223015965.1204186,
+      "volume_24h": 31919463.1809885,
+      "pct_7d": 33.7783383,
+      "pct_30d": 53.73116707,
+      "float_ratio": 1,
+      "score": 0.6122298412940589,
+      "parts": {
+        "float_quality": 1,
+        "momentum_7d": 0.675566766,
+        "momentum_30d": 0.5373116707,
+        "volume_surge": 0.28625271884686304
+      }
+    },
+    {
+      "id": 36300,
+      "symbol": "SKYAI",
+      "name": "SKYAI",
+      "price": 0.27225741973619116,
+      "market_cap": 272257419.73619115,
+      "volume_24h": 101989581.39296454,
+      "pct_7d": -19.70033352,
+      "pct_30d": 56.98348833,
+      "float_ratio": 1,
+      "score": 0.5887312783825152,
+      "parts": {
+        "float_quality": 1,
+        "momentum_7d": 0,
+        "momentum_30d": 0.5698348833,
+        "volume_surge": 0.7492143390750505
+      }
+    },
+    {
+      "id": 39841,
+      "symbol": "GENIUS",
+      "name": "Genius Terminal",
+      "price": 0.6412567564065786,
+      "market_cap": 215062805.02751774,
+      "volume_24h": 121873229.94844243,
+      "pct_7d": 35.32926229,
+      "pct_30d": 6.6985613,
+      "float_ratio": 0.35155811012882293,
+      "score": 0.5779329615822058,
+      "parts": {
+        "float_quality": 0.35155811012882293,
+        "momentum_7d": 0.7065852458,
+        "momentum_30d": 0.066985613,
+        "volume_surge": 1
+      }
+    },
+    {
+      "id": 3640,
+      "symbol": "LPT",
+      "name": "Livepeer",
+      "price": 2.145993783187542,
+      "market_cap": 106632187.55863358,
+      "volume_24h": 75569949.62278724,
+      "pct_7d": 1.42197268,
+      "pct_30d": -0.06888954,
+      "float_ratio": 1,
+      "score": 0.5571098634,
+      "parts": {
+        "float_quality": 1,
+        "momentum_7d": 0.0284394536,
+        "momentum_30d": 0,
+        "volume_surge": 1
+      }
+    },
+    {
+      "id": 26081,
+      "symbol": "FDUSD",
+      "name": "First Digital USD",
+      "price": 0.9974510845342452,
+      "market_cap": 373193784.84548926,
+      "volume_24h": 172898720.2334962,
+      "pct_7d": -0.0210344,
+      "pct_30d": -0.19577366,
+      "float_ratio": 1,
+      "score": 0.5279768483632388,
+      "parts": {
+        "float_quality": 1,
+        "momentum_7d": 0,
+        "momentum_30d": 0,
+        "volume_surge": 0.9265894945441291
+      }
+    },
+    {
+      "id": 32956,
+      "symbol": "GRASS",
+      "name": "Grass",
+      "price": 0.41511680752065466,
+      "market_cap": 101249102.71395476,
+      "volume_24h": 61628224.41030572,
+      "pct_7d": 31.65982191,
+      "pct_30d": 3.65660102,
+      "float_ratio": 0.243905091,
+      "score": 0.52658858434,
+      "parts": {
+        "float_quality": 0.243905091,
+        "momentum_7d": 0.6331964382,
+        "momentum_30d": 0.0365660102,
+        "volume_surge": 1
+      }
+    },
+    {
+      "id": 3773,
+      "symbol": "FET",
+      "name": "Artificial Superintelligence Alliance",
+      "price": 0.2022520073359568,
+      "market_cap": 456861587.226872,
+      "volume_24h": 232667285.41731447,
+      "pct_7d": -1.12753416,
+      "pct_30d": -4.01836234,
+      "float_ratio": 0.8321860462623999,
+      "score": 0.5080465115656,
+      "parts": {
+        "float_quality": 0.8321860462623999,
+        "momentum_7d": 0,
+        "momentum_30d": 0,
+        "volume_surge": 1
+      }
+    },
+    {
+      "id": 36671,
+      "symbol": "SAHARA",
+      "name": "Sahara AI",
+      "price": 0.03436548199524592,
+      "market_cap": 112525475.10818335,
+      "volume_24h": 152295691.18109253,
+      "pct_7d": -6.97322188,
+      "pct_30d": 55.93223742,
+      "float_ratio": 0.3274375,
+      "score": 0.49372384984,
+      "parts": {
+        "float_quality": 0.3274375,
+        "momentum_7d": 0,
+        "momentum_30d": 0.5593223742,
+        "volume_surge": 1
+      }
+    },
+    {
+      "id": 36532,
+      "symbol": "B",
+      "name": "BUILDon",
+      "price": 0.26670987091390475,
+      "market_cap": 266709870.91390476,
+      "volume_24h": 14439466.17351376,
+      "pct_7d": -40.75188332,
+      "pct_30d": 153.23267261,
+      "float_ratio": 1,
+      "score": 0.48248353604019756,
+      "parts": {
+        "float_quality": 1,
+        "momentum_7d": 0,
+        "momentum_30d": 1,
+        "volume_surge": 0.1082784534673251
+      }
+    },
+    {
+      "id": 4172,
+      "symbol": "LUNC",
+      "name": "Terra Classic",
+      "price": 0.00007966384355765975,
+      "market_cap": 441446205.69107056,
+      "volume_24h": 45871139.17045258,
+      "pct_7d": 4.70039973,
+      "pct_30d": 74.7363579,
+      "float_ratio": 0.8578984852856731,
+      "score": 0.4497959663403358,
+      "parts": {
+        "float_quality": 0.8578984852856731,
+        "momentum_7d": 0.0940079946,
+        "momentum_30d": 0.7473635790000001,
+        "volume_surge": 0.20782210189639172
+      }
+    },
+    {
+      "id": 39125,
+      "symbol": "LIT",
+      "name": "Lighter",
+      "price": 1.1793290877602909,
+      "market_cap": 294832271.9400727,
+      "volume_24h": 71790265.92191568,
+      "pct_7d": 34.78531053,
+      "pct_30d": 30.78452694,
+      "float_ratio": 0.25,
+      "score": 0.44409277313157414,
+      "parts": {
+        "float_quality": 0.25,
+        "momentum_7d": 0.6957062105999999,
+        "momentum_30d": 0.3078452694,
+        "volume_surge": 0.4869905553385804
+      }
+    },
+    {
+      "id": 7431,
+      "symbol": "AKT",
+      "name": "Akash Network",
+      "price": 0.7786691945201419,
+      "market_cap": 228950873.06531805,
+      "volume_24h": 14432200.49251932,
+      "pct_7d": 5.70912168,
+      "pct_30d": 63.76234865,
+      "float_ratio": 1,
+      "score": 0.44389204527048487,
+      "parts": {
+        "float_quality": 1,
+        "momentum_7d": 0.1141824336,
+        "momentum_30d": 0.6376234865,
+        "volume_surge": 0.12607246523494947
+      }
+    },
+    {
+      "id": 6748,
+      "symbol": "CFG",
+      "name": "Centrifuge",
+      "price": 0.3000669594068426,
+      "market_cap": 173185488.33285692,
+      "volume_24h": 34898061.95162658,
+      "pct_7d": 11.61892123,
+      "pct_30d": 19.11135341,
+      "float_ratio": 0.8487590308823529,
+      "score": 0.4294111797619683,
+      "parts": {
+        "float_quality": 0.8487590308823529,
+        "momentum_7d": 0.2323784246,
+        "momentum_30d": 0.19111353409999998,
+        "volume_surge": 0.4030136969046001
+      }
+    },
+    {
+      "id": 34118,
+      "symbol": "BANANAS31",
+      "name": "Banana For Scale",
+      "price": 0.010185060711041194,
+      "market_cap": 101850607.11041194,
+      "volume_24h": 24149877.92230788,
+      "pct_7d": -13.76653975,
+      "pct_30d": 8.29002469,
+      "float_ratio": 1,
+      "score": 0.4088465234293575,
+      "parts": {
+        "float_quality": 1,
+        "momentum_7d": 0,
+        "momentum_30d": 0.08290024689999999,
+        "volume_surge": 0.474221580164525
+      }
+    },
+    {
+      "id": 18876,
+      "symbol": "APE",
+      "name": "ApeCoin",
+      "price": 0.14120940117637892,
+      "market_cap": 141209401.1763789,
+      "volume_24h": 19671019.29397161,
+      "pct_7d": -2.45699908,
+      "pct_30d": 35.96964992,
+      "float_ratio": 1,
+      "score": 0.4055216355631068,
+      "parts": {
+        "float_quality": 1,
+        "momentum_7d": 0,
+        "momentum_30d": 0.3596964992,
+        "volume_surge": 0.27860778574368916
+      }
+    },
+    {
+      "id": 28541,
+      "symbol": "JTO",
+      "name": "Jito",
+      "price": 0.49050605076194087,
+      "market_cap": 232601408.35638607,
+      "volume_24h": 62339587.21945227,
+      "pct_7d": 6.80646671,
+      "pct_30d": 42.23588886,
+      "float_ratio": 0.48068519567688456,
+      "score": 0.39948162626493067,
+      "parts": {
+        "float_quality": 0.48068519567688456,
+        "momentum_7d": 0.13612933419999998,
+        "momentum_30d": 0.42235888860000004,
+        "volume_surge": 0.536020720252365
+      }
+    },
+    {
+      "id": 34958,
+      "symbol": "TAG",
+      "name": "Tagger",
+      "price": 0.0014336906606246351,
+      "market_cap": 155418623.2970231,
+      "volume_24h": 8381976.69355569,
+      "pct_7d": 18.98823212,
+      "pct_30d": 117.77960338,
+      "float_ratio": 0.26741417598958805,
+      "score": 0.39415367104199134,
+      "parts": {
+        "float_quality": 0.26741417598958805,
+        "momentum_7d": 0.37976464239999996,
+        "momentum_30d": 1,
+        "volume_surge": 0.10786322148198105
+      }
+    },
+    {
+      "id": 10529,
+      "symbol": "SUN",
+      "name": "Sun [New]",
+      "price": 0.020149176647443413,
+      "market_cap": 387384387.8847961,
+      "volume_24h": 61641770.59520181,
+      "pct_7d": 2.77524647,
+      "pct_30d": 7.56365066,
+      "float_ratio": 1,
+      "score": 0.3744773408594628,
+      "parts": {
+        "float_quality": 1,
+        "momentum_7d": 0.0555049294,
+        "momentum_30d": 0.0756365066,
+        "volume_surge": 0.318246023964876
+      }
+    },
+    {
+      "id": 32880,
+      "symbol": "KAIA",
+      "name": "Kaia",
+      "price": 0.05255370539685143,
+      "market_cap": 332364739.65567786,
+      "volume_24h": 17435983.16751967,
+      "pct_7d": 13.74676494,
+      "pct_30d": 8.04113286,
+      "float_ratio": 1.000000003035915,
+      "score": 0.36629232316162524,
+      "parts": {
+        "float_quality": 1,
+        "momentum_7d": 0.2749352988,
+        "momentum_30d": 0.0804113286,
+        "volume_surge": 0.10492077580541753
+      }
+    },
+    {
+      "id": 28752,
+      "symbol": "WIF",
+      "name": "dogwifhat",
+      "price": 0.1941101048438645,
+      "market_cap": 193884769.1640177,
+      "volume_24h": 37084495.11209174,
+      "pct_7d": -5.86974136,
+      "pct_30d": -2.15292558,
+      "float_ratio": 1,
+      "score": 0.36476248063834227,
+      "parts": {
+        "float_quality": 1,
+        "momentum_7d": 0,
+        "momentum_30d": 0,
+        "volume_surge": 0.38254160212780763
+      }
+    },
+    {
+      "id": 5632,
+      "symbol": "AR",
+      "name": "Arweave",
+      "price": 2.1216666126040273,
+      "market_cap": 139292645.14732108,
+      "volume_24h": 22135371.31496305,
+      "pct_7d": -4.32744207,
+      "pct_30d": 2.61271937,
+      "float_ratio": 1,
+      "score": 0.3505730629805413,
+      "parts": {
+        "float_quality": 1,
+        "momentum_7d": 0,
+        "momentum_30d": 0.026127193700000002,
+        "volume_surge": 0.3178254141351377
+      }
+    },
+    {
+      "id": 33597,
+      "symbol": "FARTCOIN",
+      "name": "Fartcoin",
+      "price": 0.1846077889447155,
+      "market_cap": 184607466.9887316,
+      "volume_24h": 30290255.03658954,
+      "pct_7d": -7.87824843,
+      "pct_30d": -11.7659591,
+      "float_ratio": 0.999998256,
+      "score": 0.3484471150032488,
+      "parts": {
+        "float_quality": 0.999998256,
+        "momentum_7d": 0,
+        "momentum_30d": 0,
+        "volume_surge": 0.3281585033441627
+      }
+    },
+    {
+      "id": 2394,
+      "symbol": "TEL",
+      "name": "Telcoin",
+      "price": 0.003022000104512382,
+      "market_cap": 290336383.1915352,
+      "volume_24h": 1644000.9898768,
+      "pct_7d": -7.39881224,
+      "pct_30d": 50.70002781,
+      "float_ratio": 0.9607424657531,
+      "score": 0.34498311258254905,
+      "parts": {
+        "float_quality": 0.9607424657531,
+        "momentum_7d": 0,
+        "momentum_30d": 0.5070002781,
+        "volume_surge": 0.011324801747580158
+      }
+    },
+    {
+      "id": 5692,
+      "symbol": "COMP",
+      "name": "Compound",
+      "price": 21.530024517592555,
+      "market_cap": 214792808.66214207,
+      "volume_24h": 32695224.9526837,
+      "pct_7d": -2.96098339,
+      "pct_30d": -6.22604812,
+      "float_ratio": 0.997643121523764,
+      "score": 0.34074128205740517,
+      "parts": {
+        "float_quality": 0.997643121523764,
+        "momentum_7d": 0,
+        "momentum_30d": 0,
+        "volume_surge": 0.30443500558821396
+      }
+    },
+    {
+      "id": 4066,
+      "symbol": "CHZ",
+      "name": "Chiliz",
+      "price": 0.04224244820879794,
+      "market_cap": 438258273.4428413,
+      "volume_24h": 65134922.38695651,
+      "pct_7d": -5.58635571,
+      "pct_30d": -9.93729261,
+      "float_ratio": 1,
+      "score": 0.3391733386461008,
+      "parts": {
+        "float_quality": 1,
+        "momentum_7d": 0,
+        "momentum_30d": 0,
+        "volume_surge": 0.2972444621536692
+      }
+    },
+    {
+      "id": 33280,
+      "symbol": "CHEEMS",
+      "name": "Cheems (cheems.pet)",
+      "price": 6.931893825903384e-7,
+      "market_cap": 129969567.39471216,
+      "volume_24h": 4046514.75017591,
+      "pct_7d": 12.16579116,
+      "pct_30d": 14.07685076,
+      "float_ratio": 0.9205691395976745,
+      "score": 0.33780553721387674,
+      "parts": {
+        "float_quality": 0.9205691395976745,
+        "momentum_7d": 0.2433158232,
+        "momentum_30d": 0.14076850759999998,
+        "volume_surge": 0.062268649981527036
+      }
+    },
+    {
+      "id": 9481,
+      "symbol": "PENDLE",
+      "name": "Pendle",
+      "price": 1.9026829785172608,
+      "market_cap": 324343662.1394229,
+      "volume_24h": 52518292.48005746,
+      "pct_7d": -5.20071857,
+      "pct_30d": 40.9373979,
+      "float_ratio": 0.6055057041600768,
+      "score": 0.33040427018442964,
+      "parts": {
+        "float_quality": 0.6055057041600768,
+        "momentum_7d": 0,
+        "momentum_30d": 0.409373979,
+        "volume_surge": 0.3238434944813681
+      }
+    },
+    {
+      "id": 6719,
+      "symbol": "GRT",
+      "name": "The Graph",
+      "price": 0.025858143760419915,
+      "market_cap": 280189938.5464913,
+      "volume_24h": 37927724.96329103,
+      "pct_7d": -3.73598856,
+      "pct_30d": 2.61338558,
+      "float_ratio": 0.9384704620858851,
+      "score": 0.32106298823449836,
+      "parts": {
+        "float_quality": 0.9384704620858851,
+        "momentum_7d": 0,
+        "momentum_30d": 0.0261338558,
+        "volume_surge": 0.27072867184342353
+      }
+    },
+    {
+      "id": 6210,
+      "symbol": "SAND",
+      "name": "The Sandbox",
+      "price": 0.07084313837347508,
+      "market_cap": 208111615.92664742,
+      "volume_24h": 26326268.35513408,
+      "pct_7d": -5.33933029,
+      "pct_30d": -10.03272845,
+      "float_ratio": 0.9792132341244408,
+      "score": 0.3207037379364921,
+      "parts": {
+        "float_quality": 0.9792132341244408,
+        "momentum_7d": 0,
+        "momentum_30d": 0,
+        "volume_surge": 0.2530014313512729
+      }
+    },
+    {
+      "id": 38590,
+      "symbol": "币安人生",
+      "name": "币安人生",
+      "price": 0.42737728601823877,
+      "market_cap": 427377286.0182388,
+      "volume_24h": 13896930.09053568,
+      "pct_7d": 4.69551441,
+      "pct_30d": 13.48088479,
+      "float_ratio": 1,
+      "score": 0.3199494052836065,
+      "parts": {
+        "float_quality": 1,
+        "momentum_7d": 0.09391028820000001,
+        "momentum_30d": 0.1348088479,
+        "volume_surge": 0.06503354551202149
+      }
+    },
+    {
+      "id": 7080,
+      "symbol": "GALA",
+      "name": "Gala",
+      "price": 0.003308792211562616,
+      "market_cap": 158284565.15421087,
+      "volume_24h": 17697271.00764512,
+      "pct_7d": -6.10789018,
+      "pct_30d": 0.48374068,
+      "float_ratio": 1,
+      "score": 0.3180514866402495,
+      "parts": {
+        "float_quality": 1,
+        "momentum_7d": 0,
+        "momentum_30d": 0.0048374068,
+        "volume_surge": 0.22361335093416487
+      }
+    },
+    {
+      "id": 1698,
+      "symbol": "ZEN",
+      "name": "Horizen",
+      "price": 6.092571051876324,
+      "market_cap": 110283656.66111846,
+      "volume_24h": 17151164.86321833,
+      "pct_7d": -1.68850078,
+      "pct_30d": -2.28445964,
+      "float_ratio": 0.8619682320374691,
+      "score": 0.30880324508355395,
+      "parts": {
+        "float_quality": 0.8619682320374691,
+        "momentum_7d": 0,
+        "momentum_30d": 0,
+        "volume_surge": 0.3110372902472889
+      }
+    },
+    {
+      "id": 1684,
+      "symbol": "QTUM",
+      "name": "Qtum",
+      "price": 0.9248882541310084,
+      "market_cap": 98065663.65800744,
+      "volume_24h": 9954255.41993258,
+      "pct_7d": -0.72938961,
+      "pct_30d": 0.58770512,
+      "float_ratio": 0.9833739264731303,
+      "score": 0.3079225051024465,
+      "parts": {
+        "float_quality": 0.9833739264731303,
+        "momentum_7d": 0,
+        "momentum_30d": 0.0058770511999999995,
+        "volume_surge": 0.2030120441472131
+      }
+    },
+    {
+      "id": 32684,
+      "symbol": "S",
+      "name": "Sonic",
+      "price": 0.04676452915297358,
+      "market_cap": 134681843.9605639,
+      "volume_24h": 16254706.98736227,
+      "pct_7d": -0.36509316,
+      "pct_30d": 5.60010168,
+      "float_ratio": 0.8936813932741166,
+      "score": 0.30703435227419873,
+      "parts": {
+        "float_quality": 0.8936813932741166,
+        "momentum_7d": 0,
+        "momentum_30d": 0.0560010168,
+        "volume_surge": 0.24137933531889866
+      }
+    },
+    {
+      "id": 29420,
+      "symbol": "VIRTUAL",
+      "name": "Virtuals Protocol",
+      "price": 0.742708712298714,
+      "market_cap": 487949246.27264816,
+      "volume_24h": 108126297.43838094,
+      "pct_7d": -2.33330024,
+      "pct_30d": 4.84860363,
+      "float_ratio": 0.6569860272170838,
+      "score": 0.30689971094018037,
+      "parts": {
+        "float_quality": 0.6569860272170838,
+        "momentum_7d": 0,
+        "momentum_30d": 0.04848603630000001,
+        "volume_surge": 0.4431866562530314
+      }
+    },
+    {
+      "id": 22861,
+      "symbol": "TIA",
+      "name": "Celestia",
+      "price": 0.425468166877717,
+      "market_cap": 391402205.72330433,
+      "volume_24h": 56302720.54730498,
+      "pct_7d": -0.93797489,
+      "pct_30d": 11.71632204,
+      "float_ratio": 0.7871521149927293,
+      "score": 0.3065299266709274,
+      "parts": {
+        "float_quality": 0.7871521149927293,
+        "momentum_7d": 0,
+        "momentum_30d": 0.11716322039999999,
+        "volume_surge": 0.2876975128091501
+      }
+    },
+    {
+      "id": 24647,
+      "symbol": "BERA",
+      "name": "Berachain",
+      "price": 0.3830285768686892,
+      "market_cap": 100204353.1475533,
+      "volume_24h": 27596823.96673093,
+      "pct_7d": 3.20402865,
+      "pct_30d": -7.81369713,
+      "float_ratio": 0.4839878075939192,
+      "score": 0.3022603591377834,
+      "parts": {
+        "float_quality": 0.4839878075939192,
+        "momentum_7d": 0.064080573,
+        "momentum_30d": 0,
+        "volume_surge": 0.5508108799643454
+      }
+    },
+    {
+      "id": 8000,
+      "symbol": "LDO",
+      "name": "Lido DAO",
+      "price": 0.34519979116423627,
+      "market_cap": 293092557.99602354,
+      "volume_24h": 43529885.42292892,
+      "pct_7d": -5.38451423,
+      "pct_30d": -12.63159388,
+      "float_ratio": 0.849051956281684,
+      "score": 0.3013745360586311,
+      "parts": {
+        "float_quality": 0.849051956281684,
+        "momentum_7d": 0,
+        "momentum_30d": 0,
+        "volume_surge": 0.2970384899607004
+      }
+    },
+    {
+      "id": 33824,
+      "symbol": "SYRUP",
+      "name": "Maple Finance",
+      "price": 0.20647194410855066,
+      "market_cap": 245904531.86758614,
+      "volume_24h": 25038042.45536453,
+      "pct_7d": -8.49295063,
+      "pct_30d": -12.54449181,
+      "float_ratio": 0.9568605492401858,
+      "score": 0.30030724227909256,
+      "parts": {
+        "float_quality": 0.9568605492401858,
+        "momentum_7d": 0,
+        "momentum_30d": 0,
+        "volume_surge": 0.20364034989682037
+      }
+    },
+    {
+      "id": 35347,
+      "symbol": "MELANIA",
+      "name": "Official Melania Meme",
+      "price": 0.09854455946864035,
+      "market_cap": 98544181.45988263,
+      "volume_24h": 7987355.41602609,
+      "pct_7d": -2.71422159,
+      "pct_30d": -12.61986502,
+      "float_ratio": 0.9999999999999961,
+      "score": 0.29863212803250644,
+      "parts": {
+        "float_quality": 0.9999999999999961,
+        "momentum_7d": 0,
+        "momentum_30d": 0,
+        "volume_surge": 0.16210709344169133
+      }
+    },
+    {
+      "id": 10603,
+      "symbol": "IMX",
+      "name": "Immutable",
+      "price": 0.16920031826003232,
+      "market_cap": 338400636.52006465,
+      "volume_24h": 26915268.04069791,
+      "pct_7d": -10.88939554,
+      "pct_30d": -6.936378,
+      "float_ratio": 1,
+      "score": 0.29772201669148224,
+      "parts": {
+        "float_quality": 1,
+        "momentum_7d": 0,
+        "momentum_30d": 0,
+        "volume_surge": 0.15907338897160753
+      }
+    },
+    {
+      "id": 20641,
+      "symbol": "EURC",
+      "name": "EURC",
+      "price": 1.1606133282562512,
+      "market_cap": 438711934.461678,
+      "volume_24h": 34758365.96735049,
+      "pct_7d": -0.13574003,
+      "pct_30d": -0.91047405,
+      "float_ratio": 1,
+      "score": 0.2975369324201323,
+      "parts": {
+        "float_quality": 1,
+        "momentum_7d": 0,
+        "momentum_30d": 0,
+        "volume_surge": 0.15845644140044096
+      }
+    },
+    {
+      "id": 10804,
+      "symbol": "FLOKI",
+      "name": "FLOKI",
+      "price": 0.000029601848811294746,
+      "market_cap": 282290933.7012873,
+      "volume_24h": 23500417.10670393,
+      "pct_7d": -10.56450039,
+      "pct_30d": -11.01983283,
+      "float_ratio": 0.9882415519669204,
+      "score": 0.2970097437118924,
+      "parts": {
+        "float_quality": 0.9882415519669204,
+        "momentum_7d": 0,
+        "momentum_30d": 0,
+        "volume_surge": 0.16649785240054105
+      }
+    },
+    {
+      "id": 2586,
+      "symbol": "SNX",
+      "name": "Synthetix",
+      "price": 0.3073338611344336,
+      "market_cap": 105881504.5592542,
+      "volume_24h": 7482004.49671564,
+      "pct_7d": -3.30474271,
+      "pct_30d": 2.25495272,
+      "float_ratio": 0.9987718639153633,
+      "score": 0.29660123661695814,
+      "parts": {
+        "float_quality": 0.9987718639153633,
+        "momentum_7d": 0,
+        "momentum_30d": 0.0225495272,
+        "volume_surge": 0.1413278839937244
+      }
+    },
+    {
+      "id": 21585,
+      "symbol": "SAFE",
+      "name": "Safe",
+      "price": 0.1473063169852702,
+      "market_cap": 109066478.28228226,
+      "volume_24h": 16717129.59923993,
+      "pct_7d": 3.50244257,
+      "pct_30d": -7.13646364,
+      "float_ratio": 0.740405982,
+      "score": 0.2945785165799304,
+      "parts": {
+        "float_quality": 0.740405982,
+        "momentum_7d": 0.0700488514,
+        "momentum_30d": 0,
+        "volume_surge": 0.3065493607664347
+      }
+    },
+    {
+      "id": 1697,
+      "symbol": "BAT",
+      "name": "Basic Attention Token",
+      "price": 0.09869778174648346,
+      "market_cap": 147624705.74474213,
+      "volume_24h": 10697963.63674999,
+      "pct_7d": -1.94400294,
+      "pct_30d": -5.24869598,
+      "float_ratio": 0.9971497713017371,
+      "score": 0.29276782200497825,
+      "parts": {
+        "float_quality": 0.9971497713017371,
+        "momentum_7d": 0,
+        "momentum_30d": 0,
+        "volume_surge": 0.14493459726514665
+      }
+    },
+    {
+      "id": 7334,
+      "symbol": "CFX",
+      "name": "Conflux",
+      "price": 0.05713965456896227,
+      "market_cap": 297737734.38570815,
+      "volume_24h": 18384308.46050522,
+      "pct_7d": -17.81873291,
+      "pct_30d": -5.94944476,
+      "float_ratio": 1.0000000007676508,
+      "score": 0.2870479915791037,
+      "parts": {
+        "float_quality": 1,
+        "momentum_7d": 0,
+        "momentum_30d": 0,
+        "volume_surge": 0.12349330526367903
+      }
+    },
+    {
+      "id": 30083,
+      "symbol": "ATH",
+      "name": "Aethir",
+      "price": 0.006316000903137575,
+      "market_cap": 127133295.34843165,
+      "volume_24h": 31328541.18014085,
+      "pct_7d": 2.30662905,
+      "pct_30d": 3.88426611,
+      "float_ratio": 0.47925629983333334,
+      "score": 0.2869694256660765,
+      "parts": {
+        "float_quality": 0.47925629983333334,
+        "momentum_7d": 0.046132581000000006,
+        "momentum_30d": 0.0388426611,
+        "volume_surge": 0.492845577459144
+      }
+    }
   ]
 }
