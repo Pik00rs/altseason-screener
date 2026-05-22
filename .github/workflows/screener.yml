@@ -1,1 +1,40 @@
+name: screener-scan
 
+on:
+  schedule:
+    - cron: "0 * * * *"        # toutes les heures (UTC)
+  workflow_dispatch: {}         # bouton "Run workflow" pour tester
+
+permissions:
+  contents: write               # nécessaire pour committer le JSON mis à jour
+
+concurrency:
+  group: screener
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run scan (server-side, clé jamais exposée)
+        env:
+          CMC_API_KEY: ${{ secrets.CMC_API_KEY }}
+          MIN_MARKET_CAP: "15000000"
+          MAX_MARKET_CAP: "500000000"
+          MIN_VOLUME_24H: "1000000"
+          TOP_N: "50"
+        run: node scripts/scan.mjs
+
+      - name: Commit data si changé
+        run: |
+          git config user.name "screener-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/data/screener.json
+          git diff --staged --quiet || git commit -m "data: maj screener $(date -u +%FT%TZ)"
+          git push
