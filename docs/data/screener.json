@@ -1,33 +1,66 @@
 {
-  "updated_at": "2026-09-27T19:32:59.336Z",
+  "updated_at": "2026-09-27T22:40:39.646Z",
   "source": "coinmarketcap",
   "note": "Triage, pas un prédicteur. Le tracker dit si le score vaut quelque chose.",
   "weights_mode": "appris",
   "weights": {
-    "float_quality": 0.347,
-    "momentum_24h": 0.169,
+    "float_quality": 0.33,
+    "momentum_24h": 0.185,
     "momentum_7d": 0.1,
-    "momentum_30d": 0.234,
+    "momentum_30d": 0.235,
     "volume_surge": 0.15
   },
   "dd_status": {
     "coingecko": true,
     "cg": 1,
-    "dd": 40
+    "dd": 37
   },
   "count": 50,
   "candidates": [
     {
+      "id": 6719,
+      "symbol": "GRT",
+      "name": "The Graph",
+      "price": 0.035299736146905986,
+      "market_cap": 386225721.5612225,
+      "volume_24h": 82072463.66702555,
+      "pct_7d": 57.9734603,
+      "pct_30d": 112.13227415,
+      "float_ratio": 0.9421617782854146,
+      "score": 0.881978820257141,
+      "parts": {
+        "float_quality": 0.9421617782854146,
+        "momentum_24h": 0.9314368836666667,
+        "momentum_7d": 1,
+        "momentum_30d": 1,
+        "volume_surge": 0.4249973996308055
+      },
+      "dd": {
+        "tvl": 0,
+        "category": "Developer Tools",
+        "fees24h": 1012,
+        "liquidity_usd": null,
+        "pair_age_days": null,
+        "token_age_days": null,
+        "flags": [
+          {
+            "k": "revenu réel",
+            "t": "ok"
+          }
+        ]
+      }
+    },
+    {
       "id": 36041,
       "symbol": "MUBARAK",
       "name": "Mubarak",
-      "price": 0.053626926190003116,
-      "market_cap": 53626926.19000312,
-      "volume_24h": 43324805.85635837,
-      "pct_7d": 63.2263209,
-      "pct_30d": 156.38589818,
+      "price": 0.05358167174388749,
+      "market_cap": 53581671.74388749,
+      "volume_24h": 38527225.1142446,
+      "pct_7d": 59.99624416,
+      "pct_30d": 142.07234601,
       "float_ratio": 1,
-      "score": 0.831,
+      "score": 0.8150000000000001,
       "parts": {
         "float_quality": 1,
         "momentum_24h": 0,
@@ -49,13 +82,13 @@
       "id": 1586,
       "symbol": "ARK",
       "name": "Ark",
-      "price": 0.24647384280211712,
-      "market_cap": 49146613.62646276,
-      "volume_24h": 28011889.68939385,
-      "pct_7d": 64.90928453,
-      "pct_30d": 123.19178377,
+      "price": 0.24781929601621117,
+      "market_cap": 49415675.65518934,
+      "volume_24h": 27370648.76329808,
+      "pct_7d": 64.58771247,
+      "pct_30d": 122.72333305,
       "float_ratio": 1,
-      "score": 0.831,
+      "score": 0.8150000000000001,
       "parts": {
         "float_quality": 1,
         "momentum_24h": 0,
@@ -74,46 +107,88 @@
       }
     },
     {
-      "id": 40944,
-      "symbol": "MARSCOIN",
-      "name": "MarsCoin",
-      "price": 0.12738009424405453,
-      "market_cap": 127380094.24405453,
-      "volume_24h": 58821422.48329306,
-      "pct_7d": 37.72218893,
-      "pct_30d": 203.3258998,
+      "id": 3945,
+      "symbol": "ONE",
+      "name": "Harmony",
+      "price": 0.0025352741988762845,
+      "market_cap": 38102388.86169882,
+      "volume_24h": 44586029.58142439,
+      "pct_7d": -31.37009876,
+      "pct_30d": 232.81718855,
       "float_ratio": 1,
-      "score": 0.7949780070719408,
+      "score": 0.7865072353833333,
       "parts": {
         "float_quality": 1,
-        "momentum_24h": 0,
-        "momentum_7d": 0.7544437786,
+        "momentum_24h": 0.3865255966666667,
+        "momentum_7d": 0,
         "momentum_30d": 1,
-        "volume_surge": 0.923557528079605
+        "volume_surge": 1
       },
       "dd": {
-        "tvl": null,
-        "category": "BNB Chain Ecosystem",
+        "tvl": 205378.6952673289,
+        "category": "Dexs",
         "fees24h": null,
-        "liquidity_usd": 447671.79,
-        "pair_age_days": 59,
+        "liquidity_usd": 38562006.58,
+        "pair_age_days": 7,
         "token_age_days": null,
-        "flags": []
+        "flags": [
+          {
+            "k": "TVL sans revenu",
+            "t": "warn"
+          },
+          {
+            "k": "paire récente",
+            "t": "warn"
+          }
+        ]
+      }
+    },
+    {
+      "id": 36542,
+      "symbol": "SOON",
+      "name": "SOON",
+      "price": 0.32583731832800183,
+      "market_cap": 196184318.5890428,
+      "volume_24h": 160352979.2115028,
+      "pct_7d": 72.24538488,
+      "pct_30d": 58.79477035,
+      "float_ratio": 0.6030177365680628,
+      "score": 0.7721635633899607,
+      "parts": {
+        "float_quality": 0.6030177365680628,
+        "momentum_24h": 1,
+        "momentum_7d": 1,
+        "momentum_30d": 0.5879477035,
+        "volume_surge": 1
+      },
+      "dd": {
+        "tvl": 492148.3874821648,
+        "category": "Chain",
+        "fees24h": null,
+        "liquidity_usd": null,
+        "pair_age_days": null,
+        "token_age_days": null,
+        "flags": [
+          {
+            "k": "TVL sans revenu",
+            "t": "warn"
+          }
+        ]
       }
     },
     {
       "id": 6841,
       "symbol": "PHA",
       "name": "Phala Network",
-      "price": 0.06847490121059115,
-      "market_cap": 58688641.693541944,
-      "volume_24h": 51101376.86672411,
-      "pct_7d": 85.9386013,
-      "pct_30d": 177.42470307,
-      "float_ratio": 0.8570825317885155,
-      "score": 0.7814076385306149,
+      "price": 0.06715283178604652,
+      "market_cap": 57555991.92551032,
+      "volume_24h": 48199620.71118832,
+      "pct_7d": 80.23713595,
+      "pct_30d": 172.58590961,
+      "float_ratio": 0.8570895730635398,
+      "score": 0.7678395591109681,
       "parts": {
-        "float_quality": 0.8570825317885155,
+        "float_quality": 0.8570895730635398,
         "momentum_24h": 0,
         "momentum_7d": 1,
         "momentum_30d": 1,
@@ -135,54 +210,49 @@
       }
     },
     {
-      "id": 36542,
-      "symbol": "SOON",
-      "name": "SOON",
-      "price": 0.3252822374171537,
-      "market_cap": 195846244.0715604,
-      "volume_24h": 154971972.07662502,
-      "pct_7d": 73.74565634,
-      "pct_30d": 58.93229775,
-      "float_ratio": 0.603005838569284,
-      "score": 0.7661446027185416,
+      "id": 40944,
+      "symbol": "MARSCOIN",
+      "name": "MarsCoin",
+      "price": 0.12399894103725705,
+      "market_cap": 123998941.03725705,
+      "volume_24h": 48153247.09148054,
+      "pct_7d": 34.42511132,
+      "pct_30d": 156.8316402,
+      "float_ratio": 1,
+      "score": 0.7503510089096479,
       "parts": {
-        "float_quality": 0.603005838569284,
-        "momentum_24h": 1,
-        "momentum_7d": 1,
-        "momentum_30d": 0.5893229775,
-        "volume_surge": 1
+        "float_quality": 1,
+        "momentum_24h": 0,
+        "momentum_7d": 0.6885022264,
+        "momentum_30d": 1,
+        "volume_surge": 0.7766719084643197
       },
       "dd": {
-        "tvl": 490931.8068211233,
-        "category": "Chain",
+        "tvl": null,
+        "category": "BNB Chain Ecosystem",
         "fees24h": null,
-        "liquidity_usd": null,
-        "pair_age_days": null,
+        "liquidity_usd": 440696.39,
+        "pair_age_days": 59,
         "token_age_days": null,
-        "flags": [
-          {
-            "k": "TVL sans revenu",
-            "t": "warn"
-          }
-        ]
+        "flags": []
       }
     },
     {
       "id": 3012,
       "symbol": "VTHO",
       "name": "VeThor Token",
-      "price": 0.0007682804589953686,
-      "market_cap": 79387174.28862153,
-      "volume_24h": 133718002.31517018,
-      "pct_7d": 15.91566623,
-      "pct_30d": 94.72743018,
+      "price": 0.0007581342516113336,
+      "market_cap": 78341485.41395795,
+      "volume_24h": 134012038.0496488,
+      "pct_7d": 13.37444283,
+      "pct_30d": 92.59571293,
       "float_ratio": 1,
-      "score": 0.7504935190812,
+      "score": 0.7243488110455,
       "parts": {
         "float_quality": 1,
         "momentum_24h": 0,
-        "momentum_7d": 0.3183133246,
-        "momentum_30d": 0.9472743017999999,
+        "momentum_7d": 0.2674888566,
+        "momentum_30d": 0.9259571293000001,
         "volume_surge": 1
       },
       "dd": {
@@ -196,25 +266,58 @@
       }
     },
     {
+      "id": 37529,
+      "symbol": "RHEA",
+      "name": "RHEA Finance",
+      "price": 0.1834247355301596,
+      "market_cap": 75099658.33642109,
+      "volume_24h": 16740666.51744153,
+      "pct_7d": 461.60569835,
+      "pct_30d": 1374.79969292,
+      "float_ratio": 0.40966616987259796,
+      "score": 0.7220636416981202,
+      "parts": {
+        "float_quality": 0.40966616987259796,
+        "momentum_24h": 1,
+        "momentum_7d": 1,
+        "momentum_30d": 1,
+        "volume_surge": 0.44582537093441893
+      },
+      "dd": {
+        "tvl": 215277194.76046592,
+        "category": "Lending",
+        "fees24h": 5665,
+        "liquidity_usd": 870755.2,
+        "pair_age_days": 426,
+        "token_age_days": null,
+        "flags": [
+          {
+            "k": "revenu réel",
+            "t": "ok"
+          }
+        ]
+      }
+    },
+    {
       "id": 29587,
       "symbol": "W",
       "name": "Wormhole",
-      "price": 0.015538578785889727,
-      "market_cap": 101419896.37612079,
-      "volume_24h": 162047129.5468396,
-      "pct_7d": 37.2941436,
-      "pct_30d": 70.30620616,
+      "price": 0.015486591038807226,
+      "market_cap": 101080573.7138241,
+      "volume_24h": 182333298.61538684,
+      "pct_7d": 32.46889738,
+      "pct_30d": 69.80155411,
       "float_ratio": 0.6526973784,
-      "score": 0.7222055818248666,
+      "score": 0.7177641859071667,
       "parts": {
         "float_quality": 0.6526973784,
-        "momentum_24h": 0.6308566976666667,
-        "momentum_7d": 0.7458828719999999,
-        "momentum_30d": 0.7030620616000001,
+        "momentum_24h": 0.6670411033333333,
+        "momentum_7d": 0.6493779476,
+        "momentum_30d": 0.6980155411,
         "volume_surge": 1
       },
       "dd": {
-        "tvl": 1874563279.5801759,
+        "tvl": 1889109067.344152,
         "category": "Bridge",
         "fees24h": 534,
         "liquidity_usd": null,
@@ -229,90 +332,29 @@
       }
     },
     {
-      "id": 6719,
-      "symbol": "GRT",
-      "name": "The Graph",
-      "price": 0.03139834070352807,
-      "market_cap": 343539304.1913189,
-      "volume_24h": 29949223.26836587,
-      "pct_7d": 42.3783053,
-      "pct_30d": 88.83699624,
-      "float_ratio": 0.9421617782854146,
-      "score": 0.7216380062266967,
+      "id": 29960,
+      "symbol": "SHFL",
+      "name": "Shuffle",
+      "price": 0.6207031842923963,
+      "market_cap": 300600449.1805054,
+      "volume_24h": 2465533.09945129,
+      "pct_7d": 97.51261279,
+      "pct_30d": 112.74401708,
+      "float_ratio": 0.5065082699640578,
+      "score": 0.6896083372870018,
       "parts": {
-        "float_quality": 0.9421617782854146,
-        "momentum_24h": 0.44922575766666667,
-        "momentum_7d": 0.847566106,
-        "momentum_30d": 0.8883699624000001,
-        "volume_surge": 0.17435689542927515
-      },
-      "dd": {
-        "tvl": 0,
-        "category": "Developer Tools",
-        "fees24h": 905,
-        "liquidity_usd": null,
-        "pair_age_days": null,
-        "token_age_days": null,
-        "flags": []
-      }
-    },
-    {
-      "id": 37529,
-      "symbol": "RHEA",
-      "name": "RHEA Finance",
-      "price": 0.14854761249868417,
-      "market_cap": 60817714.533984385,
-      "volume_24h": 11638157.22266891,
-      "pct_7d": 390.63772346,
-      "pct_30d": 1088.71693885,
-      "float_ratio": 0.4096514171203155,
-      "score": 0.702557433252234,
-      "parts": {
-        "float_quality": 0.4096514171203155,
+        "float_quality": 0.5065082699640578,
         "momentum_24h": 1,
         "momentum_7d": 1,
         "momentum_30d": 1,
-        "volume_surge": 0.38272261007656294
-      },
-      "dd": {
-        "tvl": 207681323.51500195,
-        "category": "Lending",
-        "fees24h": 5668,
-        "liquidity_usd": 823823.81,
-        "pair_age_days": 426,
-        "token_age_days": null,
-        "flags": [
-          {
-            "k": "revenu réel",
-            "t": "ok"
-          }
-        ]
-      }
-    },
-    {
-      "id": 36828,
-      "symbol": "USELESS",
-      "name": "Useless Coin",
-      "price": 0.29705831414194306,
-      "market_cap": 296784772.6664884,
-      "volume_24h": 33966887.94695961,
-      "pct_7d": 23.10369703,
-      "pct_30d": 397.46769115,
-      "float_ratio": 1,
-      "score": 0.6953929026473366,
-      "parts": {
-        "float_quality": 1,
-        "momentum_24h": 0.20029964066666667,
-        "momentum_7d": 0.4620739406,
-        "momentum_30d": 1,
-        "volume_surge": 0.22889912876446572
+        "volume_surge": 0.01640405465908522
       },
       "dd": {
         "tvl": null,
-        "category": "BNB Chain Ecosystem",
+        "category": "Gambling (GambleFi)",
         "fees24h": null,
-        "liquidity_usd": 6017560.16,
-        "pair_age_days": 505,
+        "liquidity_usd": null,
+        "pair_age_days": null,
         "token_age_days": null,
         "flags": []
       }
@@ -321,27 +363,88 @@
       "id": 693,
       "symbol": "XVG",
       "name": "Verge",
-      "price": 0.003504241324980873,
-      "market_cap": 57896904.28644977,
-      "volume_24h": 28690446.15905184,
-      "pct_7d": 15.13781566,
-      "pct_30d": 45.02018945,
+      "price": 0.0035387157666801647,
+      "market_cap": 58466489.331053846,
+      "volume_24h": 29158425.3069887,
+      "pct_7d": 14.98909912,
+      "pct_30d": 45.92254722,
       "float_ratio": 1,
-      "score": 0.6896102193182495,
+      "score": 0.6875749363068865,
       "parts": {
         "float_quality": 1,
-        "momentum_24h": 0.34511381500000005,
-        "momentum_7d": 0.30275631319999996,
-        "momentum_30d": 0.4502018945,
-        "volume_surge": 0.9910873996683298
+        "momentum_24h": 0.37871708666666665,
+        "momentum_7d": 0.29978198240000004,
+        "momentum_30d": 0.4592254722,
+        "volume_surge": 0.9974406071103543
       },
       "dd": {
         "tvl": null,
         "category": "Smart Contract Platform",
         "fees24h": null,
-        "liquidity_usd": 3229548465.15,
+        "liquidity_usd": 3229548474.95,
         "pair_age_days": 0,
         "token_age_days": 4371,
+        "flags": [
+          {
+            "k": "paire récente",
+            "t": "warn"
+          }
+        ]
+      }
+    },
+    {
+      "id": 34880,
+      "symbol": "ALCH",
+      "name": "Alchemist AI",
+      "price": 0.05964786571030767,
+      "market_cap": 50700685.85376152,
+      "volume_24h": 4965275.83347842,
+      "pct_7d": 51.79421907,
+      "pct_30d": 90.05015333,
+      "float_ratio": 0.85,
+      "score": 0.6837112816302241,
+      "parts": {
+        "float_quality": 0.85,
+        "momentum_24h": 0.3362891263333333,
+        "momentum_7d": 1,
+        "momentum_30d": 0.9005015333,
+        "volume_surge": 0.19586621955371608
+      },
+      "dd": {
+        "tvl": null,
+        "category": null,
+        "fees24h": null,
+        "liquidity_usd": null,
+        "pair_age_days": null,
+        "token_age_days": null,
+        "flags": []
+      }
+    },
+    {
+      "id": 9104,
+      "symbol": "AIOZ",
+      "name": "AIOZ Network",
+      "price": 0.12576871693432037,
+      "market_cap": 161094260.48889676,
+      "volume_24h": 5223617.79537635,
+      "pct_7d": 36.01739698,
+      "pct_30d": 122.35244253,
+      "float_ratio": 1,
+      "score": 0.6754255131659562,
+      "parts": {
+        "float_quality": 1,
+        "momentum_24h": 0.15493494700000002,
+        "momentum_7d": 0.7203479396,
+        "momentum_30d": 1,
+        "volume_surge": 0.06485169340637537
+      },
+      "dd": {
+        "tvl": null,
+        "category": null,
+        "fees24h": null,
+        "liquidity_usd": 129979458.68,
+        "pair_age_days": 5,
+        "token_age_days": null,
         "flags": [
           {
             "k": "paire récente",
@@ -354,23 +457,23 @@
       "id": 1042,
       "symbol": "SC",
       "name": "Siacoin",
-      "price": 0.0011520755601634926,
-      "market_cap": 64545766.57968601,
-      "volume_24h": 18356967.98272006,
-      "pct_7d": 26.16668835,
-      "pct_30d": 83.03856655,
+      "price": 0.0011535706009956138,
+      "market_cap": 64629527.19393209,
+      "volume_24h": 18218365.21673398,
+      "pct_7d": 26.43042161,
+      "pct_30d": 82.00958742,
       "float_ratio": 0.9004799839446819,
-      "score": 0.6787123881216753,
+      "score": 0.6716448012445713,
       "parts": {
         "float_quality": 0.9004799839446819,
-        "momentum_24h": 0.20284914166666665,
-        "momentum_7d": 0.523333767,
-        "momentum_30d": 0.8303856655,
-        "volume_surge": 0.5688047088280274
+        "momentum_24h": 0.23965554166666667,
+        "momentum_7d": 0.5286084322,
+        "momentum_30d": 0.8200958742000001,
+        "volume_surge": 0.5637783845166194
       },
       "dd": {
         "tvl": null,
-        "category": "Solana Ecosystem",
+        "category": null,
         "fees24h": null,
         "liquidity_usd": 298566407.84,
         "pair_age_days": 75,
@@ -379,136 +482,19 @@
       }
     },
     {
-      "id": 37545,
-      "symbol": "BNKR",
-      "name": "BankrCoin",
-      "price": 0.0004644805474354213,
-      "market_cap": 46164721.60960637,
-      "volume_24h": 4829080.48090822,
-      "pct_7d": 94.26297461,
-      "pct_30d": 86.30364816,
-      "float_ratio": 0.9938999999999967,
-      "score": 0.6782154652141948,
-      "parts": {
-        "float_quality": 0.9938999999999967,
-        "momentum_24h": 0,
-        "momentum_7d": 1,
-        "momentum_30d": 0.8630364815999999,
-        "volume_surge": 0.20921085679864
-      },
-      "dd": {
-        "tvl": 0,
-        "category": "Interface",
-        "fees24h": 0.8,
-        "liquidity_usd": null,
-        "pair_age_days": null,
-        "token_age_days": null,
-        "flags": []
-      }
-    },
-    {
-      "id": 34880,
-      "symbol": "ALCH",
-      "name": "Alchemist AI",
-      "price": 0.05913956260736529,
-      "market_cap": 50268628.21626049,
-      "volume_24h": 5049826.78852887,
-      "pct_7d": 51.84205363,
-      "pct_30d": 86.82434,
-      "float_ratio": 0.85,
-      "score": 0.6747125244758814,
-      "parts": {
-        "float_quality": 0.85,
-        "momentum_24h": 0.27489065900000004,
-        "momentum_7d": 1,
-        "momentum_30d": 0.8682434000000001,
-        "volume_surge": 0.20091365003254227
-      },
-      "dd": {
-        "tvl": null,
-        "category": null,
-        "fees24h": null,
-        "liquidity_usd": null,
-        "pair_age_days": null,
-        "token_age_days": null,
-        "flags": []
-      }
-    },
-    {
-      "id": 36769,
-      "symbol": "BULLA",
-      "name": "Bulla",
-      "price": 0.09537860390522446,
-      "market_cap": 95378603.90522446,
-      "volume_24h": 3340628.21725838,
-      "pct_7d": -11.81844237,
-      "pct_30d": 470.95032996,
-      "float_ratio": 1,
-      "score": 0.6718798392503564,
-      "parts": {
-        "float_quality": 1,
-        "momentum_24h": 0.47557610933333333,
-        "momentum_7d": 0,
-        "momentum_30d": 1,
-        "volume_surge": 0.07004984515348717
-      },
-      "dd": {
-        "tvl": 5666.8566433366,
-        "category": "Dexs",
-        "fees24h": null,
-        "liquidity_usd": null,
-        "pair_age_days": null,
-        "token_age_days": null,
-        "flags": [
-          {
-            "k": "TVL sans revenu",
-            "t": "warn"
-          }
-        ]
-      }
-    },
-    {
-      "id": 41861,
-      "symbol": "牛来",
-      "name": "牛来 (Niu Lai)",
-      "price": 0.10564302180368815,
-      "market_cap": 105643021.80368815,
-      "volume_24h": 24982922.54723376,
-      "pct_7d": 8.68484741,
-      "pct_30d": 101.5898281,
-      "float_ratio": 1,
-      "score": 0.6693150032389275,
-      "parts": {
-        "float_quality": 1,
-        "momentum_24h": 0,
-        "momentum_7d": 0.1736969482,
-        "momentum_30d": 1,
-        "volume_surge": 0.47296872279284935
-      },
-      "dd": {
-        "tvl": null,
-        "category": null,
-        "fees24h": null,
-        "liquidity_usd": 855387.58,
-        "pair_age_days": 42,
-        "token_age_days": null,
-        "flags": []
-      }
-    },
-    {
       "id": 35702,
       "symbol": "NIL",
       "name": "Nillion",
-      "price": 0.10174156989558814,
-      "market_cap": 51632446.22213352,
-      "volume_24h": 43539350.01663221,
-      "pct_7d": 75.31897997,
-      "pct_30d": 122.31007938,
+      "price": 0.09840765734498168,
+      "market_cap": 49940531.49489725,
+      "volume_24h": 42139374.34010912,
+      "pct_7d": 53.48074783,
+      "pct_30d": 104.54589954,
       "float_ratio": 0.5021449417529567,
-      "score": 0.6592726844059427,
+      "score": 0.6510543463234757,
       "parts": {
         "float_quality": 0.5021449417529567,
-        "momentum_24h": 0.0060851456666666665,
+        "momentum_24h": 0.001873057,
         "momentum_7d": 1,
         "momentum_30d": 1,
         "volume_surge": 1
@@ -524,119 +510,53 @@
       }
     },
     {
-      "id": 9104,
-      "symbol": "AIOZ",
-      "name": "AIOZ Network",
-      "price": 0.12275512982382528,
-      "market_cap": 157231079.2322615,
-      "volume_24h": 4323048.83112005,
-      "pct_7d": 34.06404539,
-      "pct_30d": 116.11080261,
-      "float_ratio": 1,
-      "score": 0.6581070467495678,
+      "id": 37545,
+      "symbol": "BNKR",
+      "name": "BankrCoin",
+      "price": 0.0004524970787869144,
+      "market_cap": 44973684.66063127,
+      "volume_24h": 5070919.98337277,
+      "pct_7d": 87.51429702,
+      "pct_30d": 80.49675965,
+      "float_ratio": 0.9938999999999967,
+      "score": 0.6509802992979737,
       "parts": {
-        "float_quality": 1,
-        "momentum_24h": 0.004322446999999999,
-        "momentum_7d": 0.6812809078,
-        "momentum_30d": 1,
-        "volume_surge": 0.054989749510452046
+        "float_quality": 0.9938999999999967,
+        "momentum_24h": 0,
+        "momentum_7d": 1,
+        "momentum_30d": 0.8049675965,
+        "volume_surge": 0.2255060941364991
       },
       "dd": {
-        "tvl": null,
-        "category": null,
-        "fees24h": null,
-        "liquidity_usd": 129979458.38,
-        "pair_age_days": 5,
-        "token_age_days": null,
-        "flags": [
-          {
-            "k": "paire récente",
-            "t": "warn"
-          }
-        ]
-      }
-    },
-    {
-      "id": 8646,
-      "symbol": "MINA",
-      "name": "Mina",
-      "price": 0.14482287924881515,
-      "market_cap": 186423166.2788412,
-      "volume_24h": 8783660.58523218,
-      "pct_7d": 23.44879138,
-      "pct_30d": 141.29101198,
-      "float_ratio": 1,
-      "score": 0.6551448830988594,
-      "parts": {
-        "float_quality": 1,
-        "momentum_24h": 0.07758736266666667,
-        "momentum_7d": 0.4689758276,
-        "momentum_30d": 1,
-        "volume_surge": 0.09423357365461842
-      },
-      "dd": {
-        "tvl": null,
-        "category": null,
-        "fees24h": null,
-        "liquidity_usd": 39849643.51,
-        "pair_age_days": 75,
+        "tvl": 0,
+        "category": "Interface",
+        "fees24h": 0.8,
+        "liquidity_usd": null,
+        "pair_age_days": null,
         "token_age_days": null,
         "flags": []
-      }
-    },
-    {
-      "id": 4157,
-      "symbol": "RUNE",
-      "name": "THORChain",
-      "price": 0.7576775444873577,
-      "market_cap": 248977371.27258423,
-      "volume_24h": 87869716.51474306,
-      "pct_7d": 34.95005734,
-      "pct_30d": 60.31291139,
-      "float_ratio": 0.9284835923602844,
-      "score": 0.6489993204350999,
-      "parts": {
-        "float_quality": 0.9284835923602844,
-        "momentum_24h": 0.058617966333333334,
-        "momentum_7d": 0.6990011468,
-        "momentum_30d": 0.6031291139,
-        "volume_surge": 0.7058450016209863
-      },
-      "dd": {
-        "tvl": 71628190.54738405,
-        "category": "Dexs",
-        "fees24h": 868678,
-        "liquidity_usd": 1304258928.18,
-        "pair_age_days": 73,
-        "token_age_days": null,
-        "flags": [
-          {
-            "k": "revenu réel",
-            "t": "ok"
-          }
-        ]
       }
     },
     {
       "id": 6945,
       "symbol": "AMP",
       "name": "Amp",
-      "price": 0.000656182027111504,
-      "market_cap": 58912805.28693418,
-      "volume_24h": 78520282.98848131,
-      "pct_7d": 43.30556111,
-      "pct_30d": 41.36398978,
+      "price": 0.0006721031226745082,
+      "market_cap": 60342220.24209044,
+      "volume_24h": 54505638.41007578,
+      "pct_7d": 45.37847171,
+      "pct_30d": 46.31320074,
       "float_ratio": 0.9003305266416745,
-      "score": 0.645817551049861,
+      "score": 0.6467020389507526,
       "parts": {
         "float_quality": 0.9003305266416745,
         "momentum_24h": 0,
-        "momentum_7d": 0.8661112222,
-        "momentum_30d": 0.4136398978,
+        "momentum_7d": 0.9075694342,
+        "momentum_30d": 0.4631320074,
         "volume_surge": 1
       },
       "dd": {
-        "tvl": 1068339.5128980344,
+        "tvl": 1084276.1389666041,
         "category": "Payments",
         "fees24h": null,
         "liquidity_usd": null,
@@ -651,22 +571,327 @@
       }
     },
     {
+      "id": 36769,
+      "symbol": "BULLA",
+      "name": "Bulla",
+      "price": 0.0949869519079063,
+      "market_cap": 94986951.9079063,
+      "volume_24h": 3182776.15552426,
+      "pct_7d": -12.53888082,
+      "pct_30d": 470.04415929,
+      "float_ratio": 1,
+      "score": 0.6460494622302805,
+      "parts": {
+        "float_quality": 1,
+        "momentum_24h": 0.3837687,
+        "momentum_7d": 0,
+        "momentum_30d": 1,
+        "volume_surge": 0.06701501820187031
+      },
+      "dd": {
+        "tvl": 5616.990707015423,
+        "category": "Dexs",
+        "fees24h": null,
+        "liquidity_usd": null,
+        "pair_age_days": null,
+        "token_age_days": null,
+        "flags": [
+          {
+            "k": "TVL sans revenu",
+            "t": "warn"
+          }
+        ]
+      }
+    },
+    {
+      "id": 36828,
+      "symbol": "USELESS",
+      "name": "Useless Coin",
+      "price": 0.2826944155343444,
+      "market_cap": 282434100.2519537,
+      "volume_24h": 32696277.2215917,
+      "pct_7d": 18.55928808,
+      "pct_30d": 375.32047779,
+      "float_ratio": 1,
+      "score": 0.6368483880266522,
+      "parts": {
+        "float_quality": 1,
+        "momentum_24h": 0,
+        "momentum_7d": 0.37118576160000005,
+        "momentum_30d": 1,
+        "volume_surge": 0.23153207911101398
+      },
+      "dd": {
+        "tvl": null,
+        "category": null,
+        "fees24h": null,
+        "liquidity_usd": 5841691.43,
+        "pair_age_days": 505,
+        "token_age_days": null,
+        "flags": []
+      }
+    },
+    {
+      "id": 8646,
+      "symbol": "MINA",
+      "name": "Mina",
+      "price": 0.1454565303542806,
+      "market_cap": 187238833.29229704,
+      "volume_24h": 9477747.5407405,
+      "pct_7d": 22.44292027,
+      "pct_30d": 141.31240433,
+      "float_ratio": 1,
+      "score": 0.6353544981343795,
+      "parts": {
+        "float_quality": 1,
+        "momentum_24h": 0.055584377,
+        "momentum_7d": 0.4488584054,
+        "momentum_30d": 1,
+        "volume_surge": 0.10123698566252935
+      },
+      "dd": {
+        "tvl": null,
+        "category": null,
+        "fees24h": null,
+        "liquidity_usd": 39849643.51,
+        "pair_age_days": 75,
+        "token_age_days": null,
+        "flags": []
+      }
+    },
+    {
+      "id": 41861,
+      "symbol": "牛来",
+      "name": "牛来 (Niu Lai)",
+      "price": 0.1033630179624696,
+      "market_cap": 103363017.9624696,
+      "volume_24h": 24085103.64121767,
+      "pct_7d": 5.15095428,
+      "pct_30d": 93.07859902,
+      "float_ratio": 1,
+      "score": 0.6289410292162737,
+      "parts": {
+        "float_quality": 1,
+        "momentum_24h": 0,
+        "momentum_7d": 0.10301908559999999,
+        "momentum_30d": 0.9307859902,
+        "volume_surge": 0.46602941972849143
+      },
+      "dd": {
+        "tvl": null,
+        "category": null,
+        "fees24h": null,
+        "liquidity_usd": 839119.67,
+        "pair_age_days": 43,
+        "token_age_days": null,
+        "flags": []
+      }
+    },
+    {
+      "id": 42022,
+      "symbol": "STONK",
+      "name": "STONK (stonkfun.xyz)",
+      "price": 0.2507601153772243,
+      "market_cap": 204444418.74183804,
+      "volume_24h": 30662631.04076268,
+      "pct_7d": -25.53186045,
+      "pct_30d": 1774.0541318,
+      "float_ratio": 1,
+      "score": 0.6099940838142642,
+      "parts": {
+        "float_quality": 1,
+        "momentum_24h": 0,
+        "momentum_7d": 0,
+        "momentum_30d": 1,
+        "volume_surge": 0.2999605587617619
+      },
+      "dd": {
+        "tvl": 0,
+        "category": "Launchpad",
+        "fees24h": 582580,
+        "liquidity_usd": 2609495.93,
+        "pair_age_days": 53,
+        "token_age_days": null,
+        "flags": [
+          {
+            "k": "revenu réel",
+            "t": "ok"
+          }
+        ]
+      }
+    },
+    {
+      "id": 40938,
+      "symbol": "PONS",
+      "name": "Pons",
+      "price": 0.570053865255067,
+      "market_cap": 389510902.4081999,
+      "volume_24h": 49287191.69843805,
+      "pct_7d": -3.87446988,
+      "pct_30d": 318.21312225,
+      "float_ratio": 1,
+      "score": 0.6029608309244083,
+      "parts": {
+        "float_quality": 1,
+        "momentum_24h": 0,
+        "momentum_7d": 0,
+        "momentum_30d": 1,
+        "volume_surge": 0.25307220616272263
+      },
+      "dd": {
+        "tvl": 0,
+        "category": "Launchpad",
+        "fees24h": 35612,
+        "liquidity_usd": 8298476.39,
+        "pair_age_days": 19,
+        "token_age_days": null,
+        "flags": [
+          {
+            "k": "revenu réel",
+            "t": "ok"
+          }
+        ]
+      }
+    },
+    {
+      "id": 14803,
+      "symbol": "AURORA",
+      "name": "Aurora",
+      "price": 0.07120771319687298,
+      "market_cap": 52643054.087695695,
+      "volume_24h": 4139952.71838596,
+      "pct_7d": 237.90219009,
+      "pct_30d": 340.53320445,
+      "float_ratio": 0.7394809214343822,
+      "score": 0.602621290731537,
+      "parts": {
+        "float_quality": 0.7394809214343822,
+        "momentum_24h": 0,
+        "momentum_7d": 1,
+        "momentum_30d": 1,
+        "volume_surge": 0.15728391105460557
+      },
+      "dd": {
+        "tvl": 4258243.2922000345,
+        "category": "Farm",
+        "fees24h": null,
+        "liquidity_usd": null,
+        "pair_age_days": null,
+        "token_age_days": null,
+        "flags": [
+          {
+            "k": "TVL sans revenu",
+            "t": "warn"
+          }
+        ]
+      }
+    },
+    {
+      "id": 4157,
+      "symbol": "RUNE",
+      "name": "THORChain",
+      "price": 0.7542699099000564,
+      "market_cap": 247857537.30573758,
+      "volume_24h": 74798820.39051153,
+      "pct_7d": 33.76039695,
+      "pct_30d": 58.36169119,
+      "float_ratio": 0.928483425445422,
+      "score": 0.6016047497991174,
+      "parts": {
+        "float_quality": 0.928483425445422,
+        "momentum_24h": 0,
+        "momentum_7d": 0.675207939,
+        "momentum_30d": 0.5836169119,
+        "volume_surge": 0.603563008037521
+      },
+      "dd": {
+        "tvl": 71863829.84590705,
+        "category": "Dexs",
+        "fees24h": 868678,
+        "liquidity_usd": 1304258928.18,
+        "pair_age_days": 73,
+        "token_age_days": null,
+        "flags": [
+          {
+            "k": "revenu réel",
+            "t": "ok"
+          }
+        ]
+      }
+    },
+    {
+      "id": 5665,
+      "symbol": "HNT",
+      "name": "Helium",
+      "price": 0.5004001812087218,
+      "market_cap": 93235281.48636246,
+      "volume_24h": 5340410.10424286,
+      "pct_7d": 8.41948938,
+      "pct_30d": 120.33657371,
+      "float_ratio": 1,
+      "score": 0.5990226350511777,
+      "parts": {
+        "float_quality": 1,
+        "momentum_24h": 0,
+        "momentum_7d": 0.1683897876,
+        "momentum_30d": 1,
+        "volume_surge": 0.11455770860785149
+      },
+      "dd": {
+        "tvl": 0,
+        "category": "Chain",
+        "fees24h": null,
+        "liquidity_usd": 664291215.64,
+        "pair_age_days": 28,
+        "token_age_days": null,
+        "flags": []
+      }
+    },
+    {
+      "id": 34332,
+      "symbol": "PURR",
+      "name": "Purr",
+      "price": 0.15468796250548536,
+      "market_cap": 92092357.29928847,
+      "volume_24h": 4063613.41008799,
+      "pct_7d": 23.02225754,
+      "pct_30d": 32.84182302,
+      "float_ratio": 1,
+      "score": 0.5981197259840384,
+      "parts": {
+        "float_quality": 1,
+        "momentum_24h": 0.7116719056666666,
+        "momentum_7d": 0.4604451508,
+        "momentum_30d": 0.3284182302,
+        "volume_surge": 0.08825082839136722
+      },
+      "dd": {
+        "tvl": null,
+        "category": null,
+        "fees24h": null,
+        "liquidity_usd": null,
+        "pair_age_days": null,
+        "token_age_days": null,
+        "flags": []
+      }
+    },
+    {
       "id": 5632,
       "symbol": "AR",
       "name": "Arweave",
-      "price": 4.975566772899972,
-      "market_cap": 326658228.38854516,
-      "volume_24h": 24217584.10397805,
-      "pct_7d": 4.93334236,
-      "pct_30d": 140.3984267,
+      "price": 4.675149454406014,
+      "market_cap": 306935090.6003094,
+      "volume_24h": 26410666.07271693,
+      "pct_7d": -2.04124325,
+      "pct_30d": 124.99060541,
       "float_ratio": 1,
-      "score": 0.6415661555642549,
+      "score": 0.5936748079095152,
       "parts": {
         "float_quality": 1,
-        "momentum_24h": 0.16839205833333332,
-        "momentum_7d": 0.0986668472,
+        "momentum_24h": 0.015464224666666667,
+        "momentum_7d": 0,
         "momentum_30d": 1,
-        "volume_surge": 0.14827475323947653
+        "volume_surge": 0.17209284230787986
       },
       "dd": {
         "tvl": null,
@@ -684,243 +909,27 @@
       }
     },
     {
-      "id": 39970,
-      "symbol": "ARX",
-      "name": "Arcium",
-      "price": 0.2749425234266101,
-      "market_cap": 57416616.14004543,
-      "volume_24h": 27696734.15337552,
-      "pct_7d": 41.58942253,
-      "pct_30d": 124.77478881,
-      "float_ratio": 0.208831342,
-      "score": 0.6409911907017576,
-      "parts": {
-        "float_quality": 0.208831342,
-        "momentum_24h": 0.630966341,
-        "momentum_7d": 0.8317884506,
-        "momentum_30d": 1,
-        "volume_surge": 0.9647637222583841
-      },
-      "dd": {
-        "tvl": 17854.6367160158,
-        "category": "Dexs",
-        "fees24h": 1.82,
-        "liquidity_usd": null,
-        "pair_age_days": null,
-        "token_age_days": null,
-        "flags": [
-          {
-            "k": "TVL sans revenu",
-            "t": "warn"
-          }
-        ]
-      }
-    },
-    {
-      "id": 38236,
-      "symbol": "Q",
-      "name": "Quack AI",
-      "price": 0.03358573090906054,
-      "market_cap": 150504092.6741025,
-      "volume_24h": 103293515.58869137,
-      "pct_7d": 34.06812001,
-      "pct_30d": 37.95124908,
-      "float_ratio": 0.4481205316653791,
-      "score": 0.6314399873550866,
-      "parts": {
-        "float_quality": 0.4481205316653791,
-        "momentum_24h": 1,
-        "momentum_7d": 0.6813624002,
-        "momentum_30d": 0.3795124908,
-        "volume_surge": 1
-      },
-      "dd": {
-        "tvl": null,
-        "category": null,
-        "fees24h": null,
-        "liquidity_usd": 1123612.75,
-        "pair_age_days": 392,
-        "token_age_days": null,
-        "flags": []
-      }
-    },
-    {
-      "id": 35690,
-      "symbol": "B3",
-      "name": "B3 (Base)",
-      "price": 0.0008534160947499156,
-      "market_cap": 39625460.52110413,
-      "volume_24h": 18741443.52189532,
-      "pct_7d": 48.06921538,
-      "pct_30d": 84.23988059,
-      "float_ratio": 0.46431583333,
-      "score": 0.6251933331701048,
-      "parts": {
-        "float_quality": 0.46431583333,
-        "momentum_24h": 0.171163205,
-        "momentum_7d": 0.9613843076,
-        "momentum_30d": 0.8423988058999999,
-        "volume_surge": 0.9459293734599659
-      },
-      "dd": {
-        "tvl": null,
-        "category": null,
-        "fees24h": null,
-        "liquidity_usd": null,
-        "pair_age_days": null,
-        "token_age_days": null,
-        "flags": []
-      }
-    },
-    {
-      "id": 40938,
-      "symbol": "PONS",
-      "name": "Pons",
-      "price": 0.5867944724953814,
-      "market_cap": 401039331.2032198,
-      "volume_24h": 49798629.7648856,
-      "pct_7d": 2.72938021,
-      "pct_30d": 330.11632979,
-      "float_ratio": 1,
-      "score": 0.6237109393637538,
-      "parts": {
-        "float_quality": 1,
-        "momentum_24h": 0,
-        "momentum_7d": 0.0545876042,
-        "momentum_30d": 1,
-        "volume_surge": 0.24834785962502515
-      },
-      "dd": {
-        "tvl": 0,
-        "category": "Launchpad",
-        "fees24h": 35612,
-        "liquidity_usd": 8713422.49,
-        "pair_age_days": 19,
-        "token_age_days": null,
-        "flags": [
-          {
-            "k": "revenu réel",
-            "t": "ok"
-          }
-        ]
-      }
-    },
-    {
-      "id": 5665,
-      "symbol": "HNT",
-      "name": "Helium",
-      "price": 0.5076275247043454,
-      "market_cap": 94581890.52152592,
-      "volume_24h": 7245176.20908629,
-      "pct_7d": 9.4268058,
-      "pct_30d": 140.1058306,
-      "float_ratio": 1,
-      "score": 0.6228342567397924,
-      "parts": {
-        "float_quality": 1,
-        "momentum_24h": 0,
-        "momentum_7d": 0.188536116,
-        "momentum_30d": 1,
-        "volume_surge": 0.15320430093194973
-      },
-      "dd": {
-        "tvl": 0,
-        "category": "Chain",
-        "fees24h": null,
-        "liquidity_usd": 664291211.46,
-        "pair_age_days": 28,
-        "token_age_days": null,
-        "flags": []
-      }
-    },
-    {
-      "id": 42022,
-      "symbol": "STONK",
-      "name": "STONK (stonkfun.xyz)",
-      "price": 0.2676247131570795,
-      "market_cap": 218222686.1879749,
-      "volume_24h": 29376615.43153228,
-      "pct_7d": -19.36173315,
-      "pct_30d": 1861.79581777,
-      "float_ratio": 1,
-      "score": 0.6213852815828151,
-      "parts": {
-        "float_quality": 1,
-        "momentum_24h": 0,
-        "momentum_7d": 0,
-        "momentum_30d": 1,
-        "volume_surge": 0.2692352105521013
-      },
-      "dd": {
-        "tvl": 0,
-        "category": "Launchpad",
-        "fees24h": 582580,
-        "liquidity_usd": 2849262.39,
-        "pair_age_days": 53,
-        "token_age_days": null,
-        "flags": [
-          {
-            "k": "revenu réel",
-            "t": "ok"
-          }
-        ]
-      }
-    },
-    {
-      "id": 14803,
-      "symbol": "AURORA",
-      "name": "Aurora",
-      "price": 0.07273670290153592,
-      "market_cap": 53771083.39073411,
-      "volume_24h": 3952655.38286478,
-      "pct_7d": 250.15474424,
-      "pct_30d": 347.75990761,
-      "float_ratio": 0.7394488050838098,
-      "score": 0.6126414175881446,
-      "parts": {
-        "float_quality": 0.7394488050838098,
-        "momentum_24h": 0,
-        "momentum_7d": 1,
-        "momentum_30d": 1,
-        "volume_surge": 0.1470178814937512
-      },
-      "dd": {
-        "tvl": 4039077.279601678,
-        "category": "Farm",
-        "fees24h": null,
-        "liquidity_usd": null,
-        "pair_age_days": null,
-        "token_age_days": null,
-        "flags": [
-          {
-            "k": "TVL sans revenu",
-            "t": "warn"
-          }
-        ]
-      }
-    },
-    {
       "id": 17751,
       "symbol": "T",
       "name": "Threshold",
-      "price": 0.0058370927501337445,
-      "market_cap": 65112769.62774192,
-      "volume_24h": 15312423.35455499,
-      "pct_7d": 13.86267448,
-      "pct_30d": 61.37661476,
+      "price": 0.005804991370944535,
+      "market_cap": 64754678.74288629,
+      "volume_24h": 14960541.66453422,
+      "pct_7d": 12.85451048,
+      "pct_30d": 59.99409328,
       "float_ratio": 1,
-      "score": 0.6018424768644534,
+      "score": 0.5851427565188349,
       "parts": {
         "float_quality": 1,
-        "momentum_24h": 0.07660074066666667,
-        "momentum_7d": 0.2772534896,
-        "momentum_30d": 0.6137661476,
-        "volume_surge": 0.4703354946225782
+        "momentum_24h": 0.103445263,
+        "momentum_7d": 0.2570902096,
+        "momentum_30d": 0.5999409328,
+        "volume_surge": 0.46206828463889893
       },
       "dd": {
-        "tvl": 363514919.31436974,
+        "tvl": 365146490.5982717,
         "category": "Decentralized BTC",
-        "fees24h": 41.45,
+        "fees24h": 54.91,
         "liquidity_usd": null,
         "pair_age_days": null,
         "token_age_days": null,
@@ -936,54 +945,26 @@
       "id": 42031,
       "symbol": "ZCAT",
       "name": "Anonymous Cat",
-      "price": 0.07221571639724786,
-      "market_cap": 69893152.60159566,
-      "volume_24h": 3687829.13090864,
-      "pct_7d": -29.24850143,
-      "pct_30d": 45081.32450025,
+      "price": 0.06641707435233002,
+      "market_cap": 64280629.21524544,
+      "volume_24h": 3527987.23972699,
+      "pct_7d": -36.98307602,
+      "pct_30d": 41453.43931178,
       "float_ratio": 1,
-      "score": 0.5968291434581438,
+      "score": 0.5814652428708192,
       "parts": {
         "float_quality": 1,
         "momentum_24h": 0,
         "momentum_7d": 0,
         "momentum_30d": 1,
-        "volume_surge": 0.1055276230542918
+        "volume_surge": 0.10976828580546182
       },
       "dd": {
         "tvl": null,
         "category": null,
         "fees24h": null,
-        "liquidity_usd": 1522987.69,
+        "liquidity_usd": 1422478.82,
         "pair_age_days": 27,
-        "token_age_days": null,
-        "flags": []
-      }
-    },
-    {
-      "id": 40925,
-      "symbol": "AI",
-      "name": "Artificial Inu",
-      "price": 0.22161443095014075,
-      "market_cap": 221578416.13765627,
-      "volume_24h": 11204511.4552626,
-      "pct_7d": -13.4428504,
-      "pct_30d": 173.56598881,
-      "float_ratio": 1,
-      "score": 0.5961700400028608,
-      "parts": {
-        "float_quality": 1,
-        "momentum_24h": 0,
-        "momentum_7d": 0,
-        "momentum_30d": 1,
-        "volume_surge": 0.10113360001907191
-      },
-      "dd": {
-        "tvl": null,
-        "category": null,
-        "fees24h": null,
-        "liquidity_usd": 3165891.2,
-        "pair_age_days": 67,
         "token_age_days": null,
         "flags": []
       }
@@ -992,113 +973,52 @@
       "id": 42038,
       "symbol": "BONER",
       "name": "Boner Coin",
-      "price": 0.045847530358770046,
-      "market_cap": 45847530.35877004,
-      "volume_24h": 2157160.286458,
-      "pct_7d": -7.90058551,
-      "pct_30d": 1052.00209457,
+      "price": 0.04382764131527375,
+      "market_cap": 43827641.31527375,
+      "volume_24h": 2072492.24404169,
+      "pct_7d": -9.09734452,
+      "pct_30d": 1126.19234527,
       "float_ratio": 1,
-      "score": 0.5951152223658129,
+      "score": 0.5791861997258755,
       "parts": {
         "float_quality": 1,
         "momentum_24h": 0,
         "momentum_7d": 0,
         "momentum_30d": 1,
-        "volume_surge": 0.09410148243875313
+        "volume_surge": 0.09457466483917013
       },
       "dd": {
         "tvl": null,
         "category": null,
         "fees24h": null,
-        "liquidity_usd": 446693.82,
-        "pair_age_days": 27,
+        "liquidity_usd": 485045.11,
+        "pair_age_days": 37,
         "token_age_days": null,
         "flags": []
-      }
-    },
-    {
-      "id": 41878,
-      "symbol": "CATE",
-      "name": "Catecoin (cate.meme)",
-      "price": 0.08988945591595052,
-      "market_cap": 86668307.93818124,
-      "volume_24h": 3956610.28938275,
-      "pct_7d": -14.45717519,
-      "pct_30d": 108.89747617,
-      "float_ratio": 0.9999946477315006,
-      "score": 0.594693842091142,
-      "parts": {
-        "float_quality": 0.9999946477315006,
-        "momentum_24h": 0,
-        "momentum_7d": 0,
-        "momentum_30d": 1,
-        "volume_surge": 0.09130466218874195
-      },
-      "dd": {
-        "tvl": null,
-        "category": null,
-        "fees24h": null,
-        "liquidity_usd": 3594976.5,
-        "pair_age_days": 63,
-        "token_age_days": null,
-        "flags": []
-      }
-    },
-    {
-      "id": 8290,
-      "symbol": "SUPER",
-      "name": "SuperVerse",
-      "price": 0.20648813884893463,
-      "market_cap": 132185989.28947508,
-      "volume_24h": 26743989.00369225,
-      "pct_7d": 48.75343347,
-      "pct_30d": 85.24274467,
-      "float_ratio": 0.6401638571851193,
-      "score": 0.5892736405097043,
-      "parts": {
-        "float_quality": 0.6401638571851193,
-        "momentum_24h": 0.056009592,
-        "momentum_7d": 0.9750686693999999,
-        "momentum_30d": 0.8524274466999999,
-        "volume_surge": 0.40464181033778684
-      },
-      "dd": {
-        "tvl": 37370.13112117822,
-        "category": "Services",
-        "fees24h": null,
-        "liquidity_usd": null,
-        "pair_age_days": null,
-        "token_age_days": null,
-        "flags": [
-          {
-            "k": "TVL sans revenu",
-            "t": "warn"
-          }
-        ]
       }
     },
     {
       "id": 11165,
       "symbol": "ORCA",
       "name": "Orca",
-      "price": 1.7600526327531951,
-      "market_cap": 107009026.80756336,
-      "volume_24h": 41793507.70532499,
-      "pct_7d": 23.61470312,
-      "pct_30d": 39.5458328,
-      "float_ratio": 0.810655244611377,
-      "score": 0.5760892281089605,
+      "price": 1.7725041125621261,
+      "market_cap": 107766061.39901376,
+      "volume_24h": 43061264.82292992,
+      "pct_7d": 23.27963503,
+      "pct_30d": 40.52227294,
+      "float_ratio": 0.810655244602556,
+      "score": 0.5757742576949363,
       "parts": {
-        "float_quality": 0.810655244611377,
-        "momentum_24h": 0.224006088,
-        "momentum_7d": 0.47229406240000005,
-        "momentum_30d": 0.39545832799999997,
-        "volume_surge": 0.7811211624320845
+        "float_quality": 0.810655244602556,
+        "momentum_24h": 0.2518763866666667,
+        "momentum_7d": 0.4655927006,
+        "momentum_30d": 0.4052227294,
+        "volume_surge": 0.7991618931583966
       },
       "dd": {
         "tvl": 302036237.35736734,
         "category": "Dexs",
-        "fees24h": 251572,
+        "fees24h": 308108,
         "liquidity_usd": null,
         "pair_age_days": null,
         "token_age_days": null,
@@ -1111,22 +1031,22 @@
       }
     },
     {
-      "id": 4206,
-      "symbol": "WIN",
-      "name": "WINkLink",
-      "price": 0.000045730740950657435,
-      "market_cap": 45442722.07451763,
-      "volume_24h": 9629409.70916502,
-      "pct_7d": 18.44033395,
-      "pct_30d": 38.69487122,
-      "float_ratio": 1,
-      "score": 0.5726835198509261,
+      "id": 35690,
+      "symbol": "B3",
+      "name": "B3 (Base)",
+      "price": 0.0008376377585030499,
+      "market_cap": 38892847.38680169,
+      "volume_24h": 18661234.09507885,
+      "pct_7d": 42.31507522,
+      "pct_30d": 80.22046268,
+      "float_ratio": 0.46431583333,
+      "score": 0.5750009303308508,
       "parts": {
-        "float_quality": 1,
-        "momentum_24h": 0.20524386733333333,
-        "momentum_7d": 0.36880667899999997,
-        "momentum_30d": 0.38694871220000004,
-        "volume_surge": 0.4238042647786185
+        "float_quality": 0.46431583333,
+        "momentum_24h": 0.02532447566666667,
+        "momentum_7d": 0.8463015044,
+        "momentum_30d": 0.8022046267999999,
+        "volume_surge": 0.9596229306374492
       },
       "dd": {
         "tvl": null,
@@ -1139,55 +1059,200 @@
       }
     },
     {
-      "id": 1214,
-      "symbol": "LSK",
-      "name": "Lisk",
-      "price": 0.3220132328888467,
-      "market_cap": 76676652.64256318,
-      "volume_24h": 33570402.24055719,
-      "pct_7d": -15.54668201,
-      "pct_30d": 221.29870122,
-      "float_ratio": 0.595291162064065,
-      "score": 0.571911368812039,
+      "id": 40925,
+      "symbol": "AI",
+      "name": "Artificial Inu",
+      "price": 0.21105275943712606,
+      "market_cap": 211018461.0138561,
+      "volume_24h": 11669831.86720248,
+      "pct_7d": -20.35805211,
+      "pct_30d": 94.14725561,
+      "float_ratio": 1,
+      "score": 0.5678367771220312,
       "parts": {
-        "float_quality": 0.595291162064065,
+        "float_quality": 1,
         "momentum_24h": 0,
         "momentum_7d": 0,
-        "momentum_30d": 1,
-        "volume_surge": 0.8756355705053893
+        "momentum_30d": 0.9414725561,
+        "volume_surge": 0.11060484292354121
       },
       "dd": {
         "tvl": null,
         "category": null,
         "fees24h": null,
-        "liquidity_usd": 579334601.51,
-        "pair_age_days": 11,
+        "liquidity_usd": 3021280.14,
+        "pair_age_days": 67,
+        "token_age_days": null,
+        "flags": []
+      }
+    },
+    {
+      "id": 39671,
+      "symbol": "龙虾",
+      "name": "龙虾 (Lobster)",
+      "price": 0.09105209444367443,
+      "market_cap": 91052094.44367443,
+      "volume_24h": 38529636.43034115,
+      "pct_7d": -61.46059126,
+      "pct_30d": 46.3073585,
+      "float_ratio": 1,
+      "score": 0.565770398388728,
+      "parts": {
+        "float_quality": 1,
+        "momentum_24h": 0,
+        "momentum_7d": 0,
+        "momentum_30d": 0.463073585,
+        "volume_surge": 0.8463207060915199
+      },
+      "dd": {
+        "tvl": null,
+        "category": null,
+        "fees24h": null,
+        "liquidity_usd": 2794043.12,
+        "pair_age_days": 212,
+        "token_age_days": null,
+        "flags": []
+      }
+    },
+    {
+      "id": 4206,
+      "symbol": "WIN",
+      "name": "WINkLink",
+      "price": 0.00004609061075458031,
+      "market_cap": 45800325.36592993,
+      "volume_24h": 9681934.8152777,
+      "pct_7d": 19.14322981,
+      "pct_30d": 39.22570074,
+      "float_ratio": 1,
+      "score": 0.5644251335443266,
+      "parts": {
+        "float_quality": 1,
+        "momentum_24h": 0.21913481466666665,
+        "momentum_7d": 0.3828645962,
+        "momentum_30d": 0.3922570074,
+        "volume_surge": 0.42278890981328804
+      },
+      "dd": {
+        "tvl": null,
+        "category": null,
+        "fees24h": null,
+        "liquidity_usd": null,
+        "pair_age_days": null,
+        "token_age_days": null,
+        "flags": []
+      }
+    },
+    {
+      "id": 39970,
+      "symbol": "ARX",
+      "name": "Arcium",
+      "price": 0.24493665161202616,
+      "market_cap": 51150449.66112588,
+      "volume_24h": 32362505.6717002,
+      "pct_7d": 24.59796915,
+      "pct_30d": 102.63297569,
+      "float_ratio": 0.208831342,
+      "score": 0.5586814435066667,
+      "parts": {
+        "float_quality": 0.208831342,
+        "momentum_24h": 0.3003846613333333,
+        "momentum_7d": 0.49195938300000003,
+        "momentum_30d": 1,
+        "volume_surge": 1
+      },
+      "dd": {
+        "tvl": 17854.6367160158,
+        "category": "Dexs",
+        "fees24h": 1.64,
+        "liquidity_usd": null,
+        "pair_age_days": null,
         "token_age_days": null,
         "flags": [
           {
-            "k": "paire récente",
+            "k": "TVL sans revenu",
             "t": "warn"
           }
         ]
       }
     },
     {
-      "id": 36902,
-      "symbol": "SN51",
-      "name": "lium",
-      "price": 29.871692221425317,
-      "market_cap": 114097258.43172728,
-      "volume_24h": 3243581.09867901,
-      "pct_7d": 34.25184202,
-      "pct_30d": 54.0545899,
+      "id": 41878,
+      "symbol": "CATE",
+      "name": "Catecoin (cate.meme)",
+      "price": 0.07947657052902943,
+      "market_cap": 76628563.58726983,
+      "volume_24h": 7330676.52706968,
+      "pct_7d": -21.29590986,
+      "pct_30d": 84.13014972,
+      "float_ratio": 0.9999946477315006,
+      "score": 0.5564036051350385,
+      "parts": {
+        "float_quality": 0.9999946477315006,
+        "momentum_24h": 0,
+        "momentum_7d": 0,
+        "momentum_30d": 0.8413014972,
+        "volume_surge": 0.19133013027762177
+      },
+      "dd": {
+        "tvl": null,
+        "category": null,
+        "fees24h": null,
+        "liquidity_usd": 3378601.96,
+        "pair_age_days": 63,
+        "token_age_days": null,
+        "flags": []
+      }
+    },
+    {
+      "id": 10603,
+      "symbol": "IMX",
+      "name": "Immutable",
+      "price": 0.18077585483439065,
+      "market_cap": 361551709.6687813,
+      "volume_24h": 11807167.8655101,
+      "pct_7d": 27.98037465,
+      "pct_30d": 42.19929449,
       "float_ratio": 1,
-      "score": 0.5680320731108668,
+      "score": 0.5544920934096706,
       "parts": {
         "float_quality": 1,
-        "momentum_24h": 0.10362239633333334,
-        "momentum_7d": 0.6850368404,
-        "momentum_30d": 0.540545899,
-        "volume_surge": 0.056856424830222914
+        "momentum_24h": 0.321977967,
+        "momentum_7d": 0.559607493,
+        "momentum_30d": 0.4219929449,
+        "volume_surge": 0.06531385442113763
+      },
+      "dd": {
+        "tvl": 31183008.17956003,
+        "category": "Chain",
+        "fees24h": 24,
+        "liquidity_usd": null,
+        "pair_age_days": null,
+        "token_age_days": null,
+        "flags": [
+          {
+            "k": "TVL sans revenu",
+            "t": "warn"
+          }
+        ]
+      }
+    },
+    {
+      "id": 1214,
+      "symbol": "LSK",
+      "name": "Lisk",
+      "price": 0.3084284827831386,
+      "market_cap": 73442068.34310488,
+      "volume_24h": 29931045.38437374,
+      "pct_7d": -17.09874407,
+      "pct_30d": 211.81188695,
+      "float_ratio": 0.5952925268152299,
+      "score": 0.5537104327000602,
+      "parts": {
+        "float_quality": 0.5952925268152299,
+        "momentum_24h": 0,
+        "momentum_7d": 0,
+        "momentum_30d": 1,
+        "volume_surge": 0.8150926590068952
       },
       "dd": {
         "tvl": null,
@@ -1203,26 +1268,26 @@
       "id": 12147,
       "symbol": "SYN",
       "name": "Synapse",
-      "price": 0.18066445812229098,
-      "market_cap": 41625110.70626076,
-      "volume_24h": 7507734.12737024,
-      "pct_7d": -15.05024371,
-      "pct_30d": 75.81387564,
-      "float_ratio": 0.9692892156804535,
-      "score": 0.5678574784407323,
+      "price": 0.17792835822355632,
+      "market_cap": 40963685.86928504,
+      "volume_24h": 7618179.61358681,
+      "pct_7d": -18.12962354,
+      "pct_30d": 71.7215825,
+      "float_ratio": 0.9692627671630261,
+      "score": 0.5441946254309878,
       "parts": {
-        "float_quality": 0.9692892156804535,
+        "float_quality": 0.9692627671630261,
         "momentum_24h": 0,
         "momentum_7d": 0,
-        "momentum_30d": 0.7581387564000001,
-        "volume_surge": 0.3607310106800996
+        "momentum_30d": 0.7172158249999999,
+        "volume_surge": 0.3719479559479287
       },
       "dd": {
-        "tvl": 9851250.755769107,
+        "tvl": 9886235.735738812,
         "category": "Cross Chain Bridge",
-        "fees24h": 4.65,
-        "liquidity_usd": null,
-        "pair_age_days": null,
+        "fees24h": 4.53,
+        "liquidity_usd": 172529.65,
+        "pair_age_days": 1856,
         "token_age_days": null,
         "flags": [
           {
@@ -1233,83 +1298,55 @@
       }
     },
     {
-      "id": 17799,
-      "symbol": "AXL",
-      "name": "Axelar",
-      "price": 0.05595826891851938,
-      "market_cap": 69669275.70305435,
-      "volume_24h": 15447057.83713275,
-      "pct_7d": 17.25940927,
-      "pct_30d": 40.53967209,
-      "float_ratio": 0.9915669415127993,
-      "score": 0.5646054651220371,
+      "id": 8290,
+      "symbol": "SUPER",
+      "name": "SuperVerse",
+      "price": 0.1993150453627832,
+      "market_cap": 127594042.9238463,
+      "volume_24h": 26478435.04064096,
+      "pct_7d": 40.75663763,
+      "pct_30d": 79.87765809,
+      "float_ratio": 0.6401638571851193,
+      "score": 0.5427361250312697,
       "parts": {
-        "float_quality": 0.9915669415127993,
-        "momentum_24h": 0.14576417366666666,
-        "momentum_7d": 0.34518818539999996,
-        "momentum_30d": 0.4053967209,
-        "volume_surge": 0.4434395989121942
-      },
-      "dd": {
-        "tvl": 154762519.91868722,
-        "category": "Bridge",
-        "fees24h": 68.26,
-        "liquidity_usd": null,
-        "pair_age_days": null,
-        "token_age_days": null,
-        "flags": [
-          {
-            "k": "TVL sans revenu",
-            "t": "warn"
-          }
-        ]
-      }
-    },
-    {
-      "id": 39671,
-      "symbol": "龙虾",
-      "name": "龙虾 (Lobster)",
-      "price": 0.09184276832816436,
-      "market_cap": 91842768.32816435,
-      "volume_24h": 32559563.09149868,
-      "pct_7d": -60.9785667,
-      "pct_30d": 46.99968437,
-      "float_ratio": 1,
-      "score": 0.5633335134290489,
-      "parts": {
-        "float_quality": 1,
+        "float_quality": 0.6401638571851193,
         "momentum_24h": 0,
-        "momentum_7d": 0,
-        "momentum_30d": 0.46999684369999994,
-        "volume_surge": 0.7090283466883264
+        "momentum_7d": 0.8151327526,
+        "momentum_30d": 0.7987765808999999,
+        "volume_surge": 0.41504186925786885
       },
       "dd": {
-        "tvl": null,
-        "category": null,
+        "tvl": 37673.72541004675,
+        "category": "Services",
         "fees24h": null,
-        "liquidity_usd": 2809986.56,
-        "pair_age_days": 212,
+        "liquidity_usd": 3687017.52,
+        "pair_age_days": 2043,
         "token_age_days": null,
-        "flags": []
+        "flags": [
+          {
+            "k": "TVL sans revenu",
+            "t": "warn"
+          }
+        ]
       }
     },
     {
       "id": 8425,
       "symbol": "JASMY",
       "name": "JasmyCoin",
-      "price": 0.0052903854180171945,
-      "market_cap": 261583105.28596282,
-      "volume_24h": 49507256.23796774,
-      "pct_7d": 29.78699396,
-      "pct_30d": 14.66357244,
+      "price": 0.005190899191706316,
+      "market_cap": 256664008.85813862,
+      "volume_24h": 54195329.09424128,
+      "pct_7d": 26.4958517,
+      "pct_30d": 14.69364834,
       "float_ratio": 0.9888999935433915,
-      "score": 0.5626645246740736,
+      "score": 0.5402584667328492,
       "parts": {
         "float_quality": 0.9888999935433915,
-        "momentum_24h": 0.407404948,
-        "momentum_7d": 0.5957398792,
-        "momentum_30d": 0.1466357244,
-        "volume_surge": 0.3785202884861113
+        "momentum_24h": 0.3408316003333333,
+        "momentum_7d": 0.529917034,
+        "momentum_30d": 0.14693648339999998,
+        "volume_surge": 0.42230563868575516
       },
       "dd": {
         "tvl": null,
@@ -1322,106 +1359,22 @@
       }
     },
     {
-      "id": 1230,
-      "symbol": "STEEM",
-      "name": "Steem",
-      "price": 0.06712408269159632,
-      "market_cap": 37535635.84367453,
-      "volume_24h": 7332618.21691355,
-      "pct_7d": 18.69691637,
-      "pct_30d": 48.10423129,
+      "id": 36902,
+      "symbol": "SN51",
+      "name": "lium",
+      "price": 29.365406252275843,
+      "market_cap": 112163459.68225525,
+      "volume_24h": 3245310.22699156,
+      "pct_7d": 31.83659503,
+      "pct_30d": 51.19526847,
       "float_ratio": 1,
-      "score": 0.5555629877562327,
+      "score": 0.5395683593880645,
       "parts": {
         "float_quality": 1,
-        "momentum_24h": 0,
-        "momentum_7d": 0.3739383274,
-        "momentum_30d": 0.4810423129,
-        "volume_surge": 0.390701691984218
-      },
-      "dd": {
-        "tvl": null,
-        "category": null,
-        "fees24h": null,
-        "liquidity_usd": null,
-        "pair_age_days": null,
-        "token_age_days": null,
-        "flags": []
-      }
-    },
-    {
-      "id": 34332,
-      "symbol": "PURR",
-      "name": "Purr",
-      "price": 0.14663260202679856,
-      "market_cap": 87296656.82355504,
-      "volume_24h": 3349817.47925623,
-      "pct_7d": 16.41980052,
-      "pct_30d": 26.77250825,
-      "float_ratio": 1,
-      "score": 0.5446994695436729,
-      "parts": {
-        "float_quality": 1,
-        "momentum_24h": 0.5366885093333333,
-        "momentum_7d": 0.3283960104,
-        "momentum_30d": 0.2677250825,
-        "volume_surge": 0.0767456074755971
-      },
-      "dd": {
-        "tvl": null,
-        "category": null,
-        "fees24h": null,
-        "liquidity_usd": 444731.95,
-        "pair_age_days": 440,
-        "token_age_days": null,
-        "flags": []
-      }
-    },
-    {
-      "id": 3992,
-      "symbol": "COTI",
-      "name": "COTI",
-      "price": 0.01470033708503069,
-      "market_cap": 44479104.414710395,
-      "volume_24h": 22632705.77104082,
-      "pct_7d": -19.29290129,
-      "pct_30d": 20.34318787,
-      "float_ratio": 2.110724282195583,
-      "score": 0.5446030596158,
-      "parts": {
-        "float_quality": 1,
-        "momentum_24h": 0,
-        "momentum_7d": 0,
-        "momentum_30d": 0.2034318787,
-        "volume_surge": 1
-      },
-      "dd": {
-        "tvl": null,
-        "category": null,
-        "fees24h": null,
-        "liquidity_usd": null,
-        "pair_age_days": null,
-        "token_age_days": null,
-        "flags": []
-      }
-    },
-    {
-      "id": 7080,
-      "symbol": "GALA",
-      "name": "Gala",
-      "price": 0.0023014527543790807,
-      "market_cap": 115665690.17739274,
-      "volume_24h": 30847412.71742756,
-      "pct_7d": 19.71105397,
-      "pct_30d": 31.65089037,
-      "float_ratio": 1,
-      "score": 0.5404935655488615,
-      "parts": {
-        "float_quality": 1,
-        "momentum_24h": 0,
-        "momentum_7d": 0.39422107939999995,
-        "momentum_30d": 0.3165089037,
-        "volume_surge": 0.5333891609537431
+        "momentum_24h": 0.09138465666666667,
+        "momentum_7d": 0.6367319006000001,
+        "momentum_30d": 0.5119526847,
+        "volume_surge": 0.05786751293487396
       },
       "dd": {
         "tvl": null,
@@ -1437,25 +1390,25 @@
       "id": 38353,
       "symbol": "MET",
       "name": "Meteora",
-      "price": 0.37687540445064743,
-      "market_cap": 207703243.52387458,
-      "volume_24h": 20571266.97513149,
-      "pct_7d": 48.91316109,
-      "pct_30d": 78.29965493,
-      "float_ratio": 0.5523716533084838,
-      "score": 0.5340305009955418,
+      "price": 0.37353550545384984,
+      "market_cap": 205862560.79644844,
+      "volume_24h": 23094395.00323702,
+      "pct_7d": 46.5764644,
+      "pct_30d": 80.38561083,
+      "float_ratio": 0.5523716526944018,
+      "score": 0.5376335720505506,
       "parts": {
-        "float_quality": 0.5523716533084838,
-        "momentum_24h": 0.18696766133333334,
-        "momentum_7d": 0.9782632218,
-        "momentum_30d": 0.7829965493000001,
-        "volume_surge": 0.19808325210643052
+        "float_quality": 0.5523716526944018,
+        "momentum_24h": 0.214252672,
+        "momentum_7d": 0.931529288,
+        "momentum_30d": 0.8038561083000001,
+        "volume_surge": 0.22436712060598682
       },
       "dd": {
-        "tvl": 195156172.29584202,
+        "tvl": 195640905.8703245,
         "category": "Dexs",
         "fees24h": 1088024,
-        "liquidity_usd": 3259865.85,
+        "liquidity_usd": 3251769.66,
         "pair_age_days": 318,
         "token_age_days": null,
         "flags": [
@@ -1467,29 +1420,57 @@
       }
     },
     {
-      "id": 33391,
-      "symbol": "DEEP",
-      "name": "DeepBook Protocol",
-      "price": 0.02434222706605542,
-      "market_cap": 139850579.1833397,
-      "volume_24h": 14990683.80443001,
-      "pct_7d": 38.0772134,
-      "pct_30d": 79.03984024,
-      "float_ratio": 0.574518423494445,
-      "score": 0.5319445027492276,
+      "id": 1230,
+      "symbol": "STEEM",
+      "name": "Steem",
+      "price": 0.06679533308580893,
+      "market_cap": 37352597.86144209,
+      "volume_24h": 6838897.26439012,
+      "pct_7d": 17.14432158,
+      "pct_30d": 47.66442306,
+      "float_ratio": 1,
+      "score": 0.531227118646058,
       "parts": {
-        "float_quality": 0.574518423494445,
-        "momentum_24h": 0.23267302866666667,
-        "momentum_7d": 0.761544268,
-        "momentum_30d": 0.7903984024,
-        "volume_surge": 0.21438143326925657
+        "float_quality": 1,
+        "momentum_24h": 0,
+        "momentum_7d": 0.3428864316,
+        "momentum_30d": 0.4766442306,
+        "volume_surge": 0.3661805419670528
       },
       "dd": {
-        "tvl": 13260875.328798987,
-        "category": "Dexs",
+        "tvl": null,
+        "category": null,
         "fees24h": null,
-        "liquidity_usd": 773676.28,
-        "pair_age_days": 713,
+        "liquidity_usd": null,
+        "pair_age_days": null,
+        "token_age_days": null,
+        "flags": []
+      }
+    },
+    {
+      "id": 17799,
+      "symbol": "AXL",
+      "name": "Axelar",
+      "price": 0.05452252950483687,
+      "market_cap": 67882984.26023634,
+      "volume_24h": 16294108.17851984,
+      "pct_7d": 12.90331489,
+      "pct_30d": 36.18116062,
+      "float_ratio": 0.9915670937295451,
+      "score": 0.5258920529968367,
+      "parts": {
+        "float_quality": 0.9915670937295451,
+        "momentum_24h": 0.085583069,
+        "momentum_7d": 0.2580662978,
+        "momentum_30d": 0.3618116062,
+        "volume_surge": 0.48006458042724565
+      },
+      "dd": {
+        "tvl": 154413625.3812869,
+        "category": "Bridge",
+        "fees24h": 68.87,
+        "liquidity_usd": null,
+        "pair_age_days": null,
         "token_age_days": null,
         "flags": [
           {
@@ -1500,27 +1481,55 @@
       }
     },
     {
-      "id": 21259,
-      "symbol": "ZETA",
-      "name": "ZetaChain",
-      "price": 0.05423518789219301,
-      "market_cap": 87160466.52366678,
-      "volume_24h": 9505035.20793555,
-      "pct_7d": 40.27210888,
-      "pct_30d": 64.64751622,
-      "float_ratio": 0.7652777776190476,
-      "score": 0.5300864358950952,
+      "id": 3992,
+      "symbol": "COTI",
+      "name": "COTI",
+      "price": 0.014841619130191535,
+      "market_cap": 44906584.32910175,
+      "volume_24h": 21624914.69684057,
+      "pct_7d": -18.69494316,
+      "pct_30d": 20.43234684,
+      "float_ratio": 2.11029249395577,
+      "score": 0.522482010561614,
       "parts": {
-        "float_quality": 0.7652777776190476,
+        "float_quality": 1,
         "momentum_24h": 0,
-        "momentum_7d": 0.8054421775999999,
-        "momentum_30d": 0.6464751622,
-        "volume_surge": 0.2181042756432387
+        "momentum_7d": 0,
+        "momentum_30d": 0.2043234684,
+        "volume_surge": 0.9631066365840933
       },
       "dd": {
-        "tvl": 0,
-        "category": "Chain",
-        "fees24h": 2.98,
+        "tvl": null,
+        "category": null,
+        "fees24h": null,
+        "liquidity_usd": null,
+        "pair_age_days": null,
+        "token_age_days": null,
+        "flags": []
+      }
+    },
+    {
+      "id": 7080,
+      "symbol": "GALA",
+      "name": "Gala",
+      "price": 0.0022692119211970905,
+      "market_cap": 114045340.0942374,
+      "volume_24h": 29847963.56244653,
+      "pct_7d": 16.12646197,
+      "pct_30d": 28.82308837,
+      "float_ratio": 1,
+      "score": 0.5143655880076492,
+      "parts": {
+        "float_quality": 1,
+        "momentum_24h": 0.03168843933333333,
+        "momentum_7d": 0.3225292394,
+        "momentum_30d": 0.2882308837,
+        "volume_surge": 0.5234403008098832
+      },
+      "dd": {
+        "tvl": null,
+        "category": null,
+        "fees24h": null,
         "liquidity_usd": null,
         "pair_age_days": null,
         "token_age_days": null,
